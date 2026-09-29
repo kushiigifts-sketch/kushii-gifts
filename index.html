@@ -1,0 +1,3052 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Kushii Gifts | Wholesale Gifts & Return Gifts</title>
+
+<meta
+    name="description"
+    content="Kushii Gifts - Wholesale gifts, return gifts, wedding supplies, pooja items and decorative products."
+>
+
+<style>
+
+/* =========================================================
+   KUSHII GIFTS
+   BRAND DESIGN SYSTEM
+========================================================= */
+
+:root {
+
+    /* Primary brand colours */
+    --blush: #F3D9DC;
+    --sage: #B8D2C5;
+    --ivory: #FFF9F2;
+    --rose: #D98C9C;
+    --charcoal: #292727;
+
+    /* Supporting colours */
+    --rose-dark: #C87587;
+    --sage-dark: #91B9A7;
+    --cream-dark: #F5EAE4;
+    --muted: #766F70;
+    --white: #FFFFFF;
+
+    /* Functional */
+    --whatsapp: #25D366;
+
+    /* Shadows */
+    --shadow:
+        0 4px 18px rgba(73, 55, 58, 0.08);
+
+    --shadow-hover:
+        0 8px 25px rgba(73, 55, 58, 0.13);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    margin: 0;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    background: var(--ivory);
+
+    color: var(--charcoal);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    height: 72px;
+
+    background:
+        rgba(255, 249, 242, 0.96);
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 20px;
+
+    box-shadow:
+        0 1px 10px rgba(73, 55, 58, 0.06);
+
+    backdrop-filter: blur(10px);
+}
+
+
+.logo {
+
+    width: 46px;
+
+    height: 46px;
+
+    border-radius: 50%;
+
+    background: var(--blush);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(217, 140, 156, 0.35);
+
+    font-size: 22px;
+}
+
+
+.brand {
+
+    margin-left: 12px;
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+    color: var(--charcoal);
+}
+
+
+.brand span {
+
+    color: var(--rose);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--blush) 0%,
+            var(--ivory) 55%,
+            var(--cream-dark) 100%
+        );
+
+    text-align: center;
+
+    padding:
+        40px
+        20px
+        32px;
+
+    border-bottom:
+        1px solid
+        rgba(217, 140, 156, 0.18);
+}
+
+
+.hero-logo {
+
+    width: 90px;
+
+    height: 90px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    background: var(--ivory);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        2px solid
+        rgba(217, 140, 156, 0.35);
+
+    font-size: 38px;
+
+    box-shadow: var(--shadow);
+}
+
+
+.hero h1 {
+
+    margin:
+        18px
+        0
+        8px;
+
+    font-size: 34px;
+
+    color: var(--charcoal);
+
+    letter-spacing: -0.5px;
+}
+
+
+.hero p {
+
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 16px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search-wrapper {
+
+    max-width: 1000px;
+
+    margin:
+        25px
+        auto
+        10px;
+
+    padding:
+        0
+        18px;
+}
+
+
+.search {
+
+    width: 100%;
+
+    height: 58px;
+
+    border-radius: 30px;
+
+    border:
+        1px solid
+        #E8D9D5;
+
+    background: var(--white);
+
+    padding:
+        0
+        24px;
+
+    font-size: 17px;
+
+    color: var(--charcoal);
+
+    outline: none;
+
+    box-shadow: var(--shadow);
+}
+
+
+.search::placeholder {
+
+    color: #9A9091;
+}
+
+
+.search:focus {
+
+    border-color: var(--rose);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(217, 140, 156, 0.12);
+}
+
+
+/* =========================================================
+   CATEGORIES
+========================================================= */
+
+.categories {
+
+    display: flex;
+
+    gap: 10px;
+
+    overflow-x: auto;
+
+    padding:
+        15px
+        18px;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    scrollbar-width: none;
+}
+
+
+.categories::-webkit-scrollbar {
+
+    display: none;
+}
+
+
+.category-btn {
+
+    flex-shrink: 0;
+
+    border:
+        1px solid
+        #E5DAD6;
+
+    background: var(--white);
+
+    border-radius: 22px;
+
+    padding:
+        10px
+        18px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    color: var(--charcoal);
+
+    transition:
+        all
+        .15s
+        ease;
+}
+
+
+.category-btn:hover {
+
+    border-color: var(--rose);
+
+    color: var(--rose-dark);
+}
+
+
+.category-btn.active {
+
+    background: var(--rose);
+
+    color: var(--white);
+
+    border-color: var(--rose);
+
+    box-shadow:
+        0 3px 10px
+        rgba(217, 140, 156, 0.22);
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.container {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding:
+        10px
+        18px
+        140px;
+}
+
+
+.catalogue-title {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin:
+        20px
+        0;
+}
+
+
+.catalogue-title h2 {
+
+    margin: 0;
+
+    font-size: 23px;
+
+    color: var(--charcoal);
+}
+
+
+.product-count {
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   PRODUCT GRID
+========================================================= */
+
+.products {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            minmax(0, 1fr)
+        );
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.product-card {
+
+    background: var(--white);
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition:
+        transform
+        .18s
+        ease,
+        box-shadow
+        .18s
+        ease;
+}
+
+
+.product-card:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        var(--shadow-hover);
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+========================================================= */
+
+.product-image {
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--blush),
+            var(--ivory)
+        );
+}
+
+
+/* =========================================================
+   PRODUCT INFORMATION
+========================================================= */
+
+.product-info {
+
+    padding: 14px;
+}
+
+
+.product-name {
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    min-height: 42px;
+
+    color: var(--charcoal);
+}
+
+
+.product-meta {
+
+    color: var(--rose-dark);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-top: 5px;
+}
+
+
+.product-description {
+
+    font-size: 13px;
+
+    line-height: 1.45;
+
+    color: var(--muted);
+
+    margin-top: 7px;
+
+    min-height: 38px;
+}
+
+
+.product-price {
+
+    font-size: 19px;
+
+    font-weight: 800;
+
+    margin-top: 10px;
+
+    color: var(--rose-dark);
+}
+
+
+.moq {
+
+    font-size: 12px;
+
+    color: var(--muted);
+
+    margin-top: 3px;
+}
+
+
+/* =========================================================
+   ADD TO CART
+========================================================= */
+
+.add-button {
+
+    width: 100%;
+
+    margin-top: 12px;
+
+    height: 42px;
+
+    border-radius: 10px;
+
+    border:
+        1px solid
+        var(--rose);
+
+    background: var(--white);
+
+    color: var(--rose-dark);
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        all
+        .15s
+        ease;
+}
+
+
+.add-button:hover {
+
+    background: var(--rose);
+
+    color: var(--white);
+
+    border-color: var(--rose);
+}
+
+
+.add-button.added {
+
+    background: var(--rose);
+
+    color: var(--white);
+
+    border-color: var(--rose);
+}
+
+
+/* =========================================================
+   CART BAR
+========================================================= */
+
+.cart-bar {
+
+    position: fixed;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    z-index: 2000;
+
+    background: var(--sage);
+
+    color: var(--charcoal);
+
+    padding:
+        12px
+        18px;
+
+    box-shadow:
+        0 -4px 18px
+        rgba(73, 55, 58, 0.12);
+
+    display: flex;
+
+    justify-content: center;
+}
+
+
+.cart-inner {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.cart-summary {
+
+    display: flex;
+
+    gap: 20px;
+
+    align-items: center;
+}
+
+
+.cart-items {
+
+    font-weight: 700;
+
+    font-size: 16px;
+}
+
+
+.cart-total {
+
+    font-size: 20px;
+
+    font-weight: 900;
+}
+
+
+.view-cart {
+
+    border: 0;
+
+    background: var(--rose);
+
+    color: var(--white);
+
+    border-radius: 9px;
+
+    padding:
+        13px
+        22px;
+
+    font-weight: 900;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition:
+        transform
+        .15s
+        ease,
+        background
+        .15s
+        ease;
+}
+
+
+.view-cart:hover {
+
+    background: var(--rose-dark);
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.overlay {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(
+            41,
+            39,
+            39,
+            0.42
+        );
+
+    z-index: 3000;
+}
+
+
+.overlay.show {
+
+    display: block;
+}
+
+
+/* =========================================================
+   CART DRAWER
+========================================================= */
+
+.cart-drawer {
+
+    position: fixed;
+
+    right: 0;
+
+    top: 0;
+
+    bottom: 0;
+
+    width:
+        min(
+            520px,
+            100%
+        );
+
+    background: var(--ivory);
+
+    z-index: 3100;
+
+    transform:
+        translateX(100%);
+
+    transition:
+        transform
+        .25s
+        ease;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.cart-drawer.open {
+
+    transform:
+        translateX(0);
+}
+
+
+/* =========================================================
+   CART HEADER
+========================================================= */
+
+.cart-header {
+
+    background: var(--white);
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom:
+        1px solid
+        #E8DCD8;
+}
+
+
+.cart-header h2 {
+
+    margin: 0;
+
+    color: var(--charcoal);
+}
+
+
+.close-cart {
+
+    border: 0;
+
+    background: var(--blush);
+
+    color: var(--charcoal);
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   CART BODY
+========================================================= */
+
+.cart-body {
+
+    overflow-y: auto;
+
+    flex: 1;
+
+    padding: 16px;
+}
+
+
+.minimum-order {
+
+    background: var(--blush);
+
+    border:
+        1px solid
+        rgba(
+            217,
+            140,
+            156,
+            0.30
+        );
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    margin-bottom: 15px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: var(--charcoal);
+
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   CART ITEM
+========================================================= */
+
+.cart-item {
+
+    background: var(--white);
+
+    border-radius: 12px;
+
+    padding: 12px;
+
+    margin-bottom: 12px;
+
+    display: flex;
+
+    gap: 12px;
+
+    box-shadow: var(--shadow);
+}
+
+
+.cart-item img {
+
+    width: 75px;
+
+    height: 75px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    background: var(--blush);
+}
+
+
+.cart-item-details {
+
+    flex: 1;
+}
+
+
+.cart-item-name {
+
+    font-weight: 700;
+
+    color: var(--charcoal);
+}
+
+
+.cart-item-price {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin-top: 4px;
+}
+
+
+/* =========================================================
+   QUANTITY
+========================================================= */
+
+.quantity-control {
+
+    display: flex;
+
+    align-items: center;
+
+    margin-top: 8px;
+
+    gap: 4px;
+}
+
+
+.quantity-control button {
+
+    width: 34px;
+
+    height: 34px;
+
+    border:
+        1px solid
+        #E5DAD6;
+
+    background: var(--blush);
+
+    color: var(--charcoal);
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    border-radius: 7px;
+}
+
+
+.quantity-control span {
+
+    width: 42px;
+
+    text-align: center;
+
+    font-weight: 700;
+}
+
+
+.remove {
+
+    color: var(--rose-dark);
+
+    border: 0;
+
+    background: none;
+
+    margin-top: 6px;
+
+    cursor: pointer;
+
+    padding: 0;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   CART FOOTER
+========================================================= */
+
+.cart-footer {
+
+    background: var(--white);
+
+    padding: 18px;
+
+    border-top:
+        1px solid
+        #E5DAD6;
+}
+
+
+.total-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 21px;
+
+    font-weight: 900;
+
+    margin-bottom: 15px;
+
+    color: var(--charcoal);
+}
+
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.whatsapp-button {
+
+    width: 100%;
+
+    height: 54px;
+
+    border: 0;
+
+    border-radius: 10px;
+
+    background: var(--whatsapp);
+
+    color: var(--white);
+
+    font-size: 17px;
+
+    font-weight: 900;
+
+    cursor: pointer;
+
+    transition:
+        background
+        .15s
+        ease,
+        transform
+        .15s
+        ease;
+}
+
+
+.whatsapp-button:hover {
+
+    background: #20B957;
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.empty {
+
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    padding:
+        70px
+        20px;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+.toast {
+
+    position: fixed;
+
+    left: 50%;
+
+    bottom: 90px;
+
+    transform:
+        translateX(-50%)
+        translateY(20px);
+
+    background: var(--charcoal);
+
+    color: var(--white);
+
+    padding:
+        12px
+        18px;
+
+    border-radius: 25px;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: .25s;
+
+    z-index: 5000;
+}
+
+
+.toast.show {
+
+    opacity: 1;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .products {
+
+        grid-template-columns:
+            repeat(
+                3,
+                minmax(0, 1fr)
+            );
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .header {
+
+        height: 62px;
+
+        padding:
+            0
+            15px;
+    }
+
+
+    .brand {
+
+        font-size: 19px;
+    }
+
+
+    .hero {
+
+        padding-top: 25px;
+    }
+
+
+    .hero h1 {
+
+        font-size: 28px;
+    }
+
+
+    .products {
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+
+        gap: 12px;
+    }
+
+
+    .product-info {
+
+        padding: 11px;
+    }
+
+
+    .product-name {
+
+        font-size: 14px;
+
+        min-height: 38px;
+    }
+
+
+    .product-description {
+
+        font-size: 12px;
+
+        min-height: 48px;
+    }
+
+
+    .product-price {
+
+        font-size: 17px;
+    }
+
+
+    .cart-summary {
+
+        gap: 10px;
+    }
+
+
+    .cart-total {
+
+        font-size: 16px;
+    }
+
+
+    .view-cart {
+
+        padding:
+            11px
+            14px;
+    }
+
+}
+
+
+@media (max-width: 380px) {
+
+    .products {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .cart-items {
+
+        font-size: 13px;
+    }
+
+
+    .cart-total {
+
+        display: none;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL BRAND DETAILS
+========================================================= */
+
+::selection {
+
+    background: var(--blush);
+
+    color: var(--charcoal);
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+    <div class="logo">
+        🎁
+    </div>
+
+    <div class="brand">
+        Kushii <span>Gifts</span>
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <div class="hero-logo">
+        🎁
+    </div>
+
+    <h1>Kushii Gifts</h1>
+
+    <p>
+        Wholesale Gifts • Return Gifts • Wedding • Pooja • Decor
+    </p>
+
+</section>
+
+
+<!-- =====================================================
+     SEARCH
+===================================================== -->
+
+<div class="search-wrapper">
+
+    <input
+        type="search"
+        id="searchInput"
+        class="search"
+        placeholder="Search for products..."
+    >
+
+</div>
+
+
+<!-- =====================================================
+     CATEGORIES
+===================================================== -->
+
+<div
+    class="categories"
+    id="categoryButtons"
+></div>
+
+
+<!-- =====================================================
+     PRODUCTS
+===================================================== -->
+
+<main class="container">
+
+    <div class="catalogue-title">
+
+        <h2>
+            Our Catalogue
+        </h2>
+
+        <span
+            id="productCount"
+            class="product-count"
+        >
+            60 products
+        </span>
+
+    </div>
+
+
+    <div
+        id="products"
+        class="products"
+    ></div>
+
+</main>
+
+
+<!-- =====================================================
+     CART BAR
+===================================================== -->
+
+<div class="cart-bar">
+
+    <div class="cart-inner">
+
+        <div class="cart-summary">
+
+            <div
+                id="cartItems"
+                class="cart-items"
+            >
+                0 items
+            </div>
+
+            <div
+                id="cartTotal"
+                class="cart-total"
+            >
+                ₹0
+            </div>
+
+        </div>
+
+
+        <button
+            class="view-cart"
+            onclick="openCart()"
+        >
+            VIEW CART →
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     CART OVERLAY
+===================================================== -->
+
+<div
+    id="overlay"
+    class="overlay"
+    onclick="closeCart()"
+></div>
+
+
+<!-- =====================================================
+     CART DRAWER
+===================================================== -->
+
+<aside
+    id="cartDrawer"
+    class="cart-drawer"
+>
+
+    <div class="cart-header">
+
+        <h2>
+            Your Cart
+        </h2>
+
+        <button
+            class="close-cart"
+            onclick="closeCart()"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <div class="cart-body">
+
+        <div class="minimum-order">
+
+            🛒
+            <strong>Wholesale Order</strong>
+
+            <br>
+
+            Add products to your cart and send the
+            complete requirement directly to Kushii Gifts
+            on WhatsApp.
+
+        </div>
+
+
+        <div id="cartItemsList"></div>
+
+    </div>
+
+
+    <div class="cart-footer">
+
+        <div class="total-row">
+
+            <span>
+                Total
+            </span>
+
+            <span id="drawerTotal">
+                ₹0
+            </span>
+
+        </div>
+
+
+        <button
+            class="whatsapp-button"
+            onclick="sendWhatsAppOrder()"
+        >
+            💬 SEND ORDER ON WHATSAPP
+        </button>
+
+    </div>
+
+</aside>
+
+
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div
+    id="toast"
+    class="toast"
+>
+    Added to cart
+</div>
+
+
+<script>
+
+
+/* =========================================================
+   KUSHII GIFTS PRODUCT CATALOGUE
+
+   IMPORTANT:
+
+   To change a product, edit:
+
+   name
+   category
+   description
+   price
+   moq
+   image
+
+   Example:
+
+   image:
+   "assets/products/product-01.jpg"
+
+========================================================= */
+
+
+const products = [
+
+    {
+        id: 1,
+        name: "Wooden tray with cow",
+        category: "Gifts",
+        description: "8 inch x 8 inch weighs about 120 gms",
+        price: 250,
+        moq: 30,
+        image: "assets/products/product-01.jpg"
+    },
+
+    {
+        id: 2,
+        name: "Metal box",
+        category: "Return Gifts",
+        description: "6 inch x 6 inch weighs about 90 gms",
+        price: 150,
+        moq: 10,
+        image: "assets/products/product-02.jpg"
+    },
+
+    {
+        id: 3,
+        name: "Traditional key holder",
+        category: "Wedding",
+        description: "4 inch x 6 inch weighs about 60 gms",
+        price: 90,
+        moq: 50,
+        image: "assets/products/product-03.jpg"
+    },
+
+    {
+        id: 4,
+        name: "Pooja Decorative Item",
+        category: "Pooja",
+        description: "5 inch x 5 inch weighs about 150 gms",
+        price: 400,
+        moq: 10,
+        image: "assets/products/product-04.jpg"
+    },
+
+    {
+        id: 5,
+        name: "Baby Gift Item",
+        category: "Baby",
+        description: "A delightful gifting option for baby celebrations, birthdays and family occasions.",
+        price: 40,
+        moq: 10,
+        image: "assets/products/product-05.jpg"
+    },
+
+    {
+        id: 6,
+        name: "Home Decor Item",
+        category: "Home Decor",
+        description: "A stylish decorative piece that adds a warm and welcoming touch to the home.",
+        price: 50,
+        moq: 10,
+        image: "assets/products/product-06.jpg"
+    },
+
+    {
+        id: 7,
+        name: "Gift Accessory",
+        category: "Accessories",
+        description: "A useful accessory for completing gift packaging and presentation.",
+        price: 20,
+        moq: 10,
+        image: "assets/products/product-07.jpg"
+    },
+
+    {
+        id: 8,
+        name: "Premium Return Gift",
+        category: "Return Gifts",
+        description: "A premium return gifting option for special celebrations and memorable occasions.",
+        price: 60,
+        moq: 10,
+        image: "assets/products/product-08.jpg"
+    },
+
+    {
+        id: 9,
+        name: "Wedding Gift Decoration",
+        category: "Wedding",
+        description: "A beautiful wedding decoration suitable for gifting tables and celebration spaces.",
+        price: 75,
+        moq: 10,
+        image: "assets/products/product-09.jpg"
+    },
+
+    {
+        id: 10,
+        name: "Pooja Gift Set",
+        category: "Pooja",
+        description: "A thoughtful gifting set suitable for traditional pooja and festive occasions.",
+        price: 55,
+        moq: 10,
+        image: "assets/products/product-10.jpg"
+    },
+
+    {
+        id: 11,
+        name: "Decorative Gift",
+        category: "Gifts",
+        description: "A cheerful decorative gift suitable for festivals, celebrations and everyday gifting.",
+        price: 35,
+        moq: 10,
+        image: "assets/products/product-11.jpg"
+    },
+
+    {
+        id: 12,
+        name: "Return Gift Set",
+        category: "Return Gifts",
+        description: "A convenient return gift set for parties, family events and celebrations.",
+        price: 40,
+        moq: 10,
+        image: "assets/products/product-12.jpg"
+    },
+
+    {
+        id: 13,
+        name: "Wedding Accessory",
+        category: "Wedding",
+        description: "A useful and attractive accessory for wedding gifting and decoration.",
+        price: 35,
+        moq: 10,
+        image: "assets/products/product-13.jpg"
+    },
+
+    {
+        id: 14,
+        name: "Pooja Accessory",
+        category: "Pooja",
+        description: "A traditional accessory suitable for pooja arrangements and festive gifting.",
+        price: 25,
+        moq: 10,
+        image: "assets/products/product-14.jpg"
+    },
+
+    {
+        id: 15,
+        name: "Baby Return Gift",
+        category: "Baby",
+        description: "A sweet return gift option for baby showers, birthdays and family celebrations.",
+        price: 45,
+        moq: 10,
+        image: "assets/products/product-15.jpg"
+    },
+
+    {
+        id: 16,
+        name: "Home Decoration",
+        category: "Home Decor",
+        description: "A warm decorative addition for homes, festive displays and gifting.",
+        price: 65,
+        moq: 10,
+        image: "assets/products/product-16.jpg"
+    },
+
+    {
+        id: 17,
+        name: "Gift Packaging",
+        category: "Accessories",
+        description: "A practical packaging option for presenting gifts beautifully.",
+        price: 15,
+        moq: 20,
+        image: "assets/products/product-17.jpg"
+    },
+
+    {
+        id: 18,
+        name: "Premium Gift",
+        category: "Gifts",
+        description: "An elegant gifting choice for customers looking for something special.",
+        price: 80,
+        moq: 10,
+        image: "assets/products/product-18.jpg"
+    },
+
+    {
+        id: 19,
+        name: "Traditional Return Gift",
+        category: "Return Gifts",
+        description: "A traditional gifting option suited to Indian celebrations and family occasions.",
+        price: 30,
+        moq: 10,
+        image: "assets/products/product-19.jpg"
+    },
+
+    {
+        id: 20,
+        name: "Wedding Gift",
+        category: "Wedding",
+        description: "A thoughtful wedding gifting option for celebrations and special moments.",
+        price: 90,
+        moq: 10,
+        image: "assets/products/product-20.jpg"
+    },
+
+    {
+        id: 21,
+        name: "Pooja Decoration",
+        category: "Pooja",
+        description: "A decorative item for pooja spaces, festive occasions and traditional celebrations.",
+        price: 35,
+        moq: 10,
+        image: "assets/products/product-21.jpg"
+    },
+
+    {
+        id: 22,
+        name: "Baby Gift",
+        category: "Baby",
+        description: "A cheerful baby gifting option suitable for birthdays and family celebrations.",
+        price: 70,
+        moq: 10,
+        image: "assets/products/product-22.jpg"
+    },
+
+    {
+        id: 23,
+        name: "Home Decor",
+        category: "Home Decor",
+        description: "A stylish home decoration piece designed to add warmth to any space.",
+        price: 75,
+        moq: 10,
+        image: "assets/products/product-23.jpg"
+    },
+
+    {
+        id: 24,
+        name: "Gift Ribbon",
+        category: "Accessories",
+        description: "A useful decorative ribbon for finishing gift packaging beautifully.",
+        price: 20,
+        moq: 20,
+        image: "assets/products/product-24.jpg"
+    },
+
+    {
+        id: 25,
+        name: "Festive Gift Item",
+        category: "Gifts",
+        description: "A festive gifting option for celebrations, festivals and special occasions.",
+        price: 50,
+        moq: 10,
+        image: "assets/products/product-25.jpg"
+    },
+
+    {
+        id: 26,
+        name: "Return Gift Decoration",
+        category: "Return Gifts",
+        description: "A decorative return gift suitable for celebrations and special events.",
+        price: 45,
+        moq: 10,
+        image: "assets/products/product-26.jpg"
+    },
+
+    {
+        id: 27,
+        name: "Wedding Decoration",
+        category: "Wedding",
+        description: "A beautiful decoration option for wedding celebrations and special functions.",
+        price: 55,
+        moq: 10,
+        image: "assets/products/product-27.jpg"
+    },
+
+    {
+        id: 28,
+        name: "Pooja Gift",
+        category: "Pooja",
+        description: "A traditional gifting option suitable for pooja, festivals and family occasions.",
+        price: 45,
+        moq: 10,
+        image: "assets/products/product-28.jpg"
+    },
+
+    {
+        id: 29,
+        name: "Baby Gift Set",
+        category: "Baby",
+        description: "A charming baby gift set suitable for birthdays, showers and celebrations.",
+        price: 85,
+        moq: 10,
+        image: "assets/products/product-29.jpg"
+    },
+
+    {
+        id: 30,
+        name: "Decorative Showpiece",
+        category: "Home Decor",
+        description: "An elegant showpiece suitable for home decoration and premium gifting.",
+        price: 120,
+        moq: 5,
+        image: "assets/products/product-30.jpg"
+    },
+
+    {
+        id: 31,
+        name: "Gift Box",
+        category: "Accessories",
+        description: "A practical gift box for presenting products in a neat and attractive way.",
+        price: 30,
+        moq: 20,
+        image: "assets/products/product-31.jpg"
+    },
+
+    {
+        id: 32,
+        name: "Traditional Gift",
+        category: "Gifts",
+        description: "A traditional gifting choice inspired by Indian celebrations and family occasions.",
+        price: 65,
+        moq: 10,
+        image: "assets/products/product-32.jpg"
+    },
+
+    {
+        id: 33,
+        name: "Return Gift Pack",
+        category: "Return Gifts",
+        description: "A convenient return gift pack for parties, functions and celebrations.",
+        price: 55,
+        moq: 10,
+        image: "assets/products/product-33.jpg"
+    },
+
+    {
+        id: 34,
+        name: "Wedding Return Gift",
+        category: "Wedding",
+        description: "A thoughtful return gift option for weddings and family celebrations.",
+        price: 70,
+        moq: 10,
+        image: "assets/products/product-34.jpg"
+    },
+
+    {
+        id: 35,
+        name: "Pooja Thali Accessory",
+        category: "Pooja",
+        description: "A traditional accessory designed for pooja thali arrangements and festive gifting.",
+        price: 100,
+        moq: 5,
+        image: "assets/products/product-35.jpg"
+    },
+
+    {
+        id: 36,
+        name: "Baby Decoration",
+        category: "Baby",
+        description: "A cheerful decorative piece for baby celebrations and special family occasions.",
+        price: 45,
+        moq: 10,
+        image: "assets/products/product-36.jpg"
+    },
+
+    {
+        id: 37,
+        name: "Decorative Lamp",
+        category: "Home Decor",
+        description: "A warm decorative lamp suitable for homes, festive displays and gifting.",
+        price: 150,
+        moq: 5,
+        image: "assets/products/product-37.jpg"
+    },
+
+    {
+        id: 38,
+        name: "Decorative Accessory",
+        category: "Accessories",
+        description: "A versatile decorative accessory for gifts, displays and celebrations.",
+        price: 25,
+        moq: 20,
+        image: "assets/products/product-38.jpg"
+    },
+
+    {
+        id: 39,
+        name: "Premium Gift Box",
+        category: "Gifts",
+        description: "A premium gift box designed to make special gifting moments feel more memorable.",
+        price: 90,
+        moq: 10,
+        image: "assets/products/product-39.jpg"
+    },
+
+    {
+        id: 40,
+        name: "Return Gift Decoration",
+        category: "Return Gifts",
+        description: "A charming decorative return gift for celebrations and special occasions.",
+        price: 50,
+        moq: 10,
+        image: "assets/products/product-40.jpg"
+    },
+
+    {
+        id: 41,
+        name: "Wedding Favour",
+        category: "Wedding",
+        description: "A thoughtful wedding favour suitable for guests and special celebrations.",
+        price: 65,
+        moq: 10,
+        image: "assets/products/product-41.jpg"
+    },
+
+    {
+        id: 42,
+        name: "Pooja Decorative Set",
+        category: "Pooja",
+        description: "A traditional decorative set for pooja spaces and festive celebrations.",
+        price: 80,
+        moq: 10,
+        image: "assets/products/product-42.jpg"
+    },
+
+    {
+        id: 43,
+        name: "Baby Shower Gift",
+        category: "Baby",
+        description: "A delightful gift option for baby showers and family celebrations.",
+        price: 95,
+        moq: 10,
+        image: "assets/products/product-43.jpg"
+    },
+
+    {
+        id: 44,
+        name: "Decorative Tray",
+        category: "Home Decor",
+        description: "A decorative tray suitable for gifting, displays and home decoration.",
+        price: 130,
+        moq: 5,
+        image: "assets/products/product-44.jpg"
+    },
+
+    {
+        id: 45,
+        name: "Gift Bag",
+        category: "Accessories",
+        description: "A practical gift bag for presenting products beautifully and conveniently.",
+        price: 20,
+        moq: 20,
+        image: "assets/products/product-45.jpg"
+    },
+
+    {
+        id: 46,
+        name: "Festival Gift",
+        category: "Gifts",
+        description: "A cheerful festival gifting option for Indian celebrations and special occasions.",
+        price: 75,
+        moq: 10,
+        image: "assets/products/product-46.jpg"
+    },
+
+    {
+        id: 47,
+        name: "Return Gift Combo",
+        category: "Return Gifts",
+        description: "A convenient return gift combination for celebrations and family functions.",
+        price: 85,
+        moq: 10,
+        image: "assets/products/product-47.jpg"
+    },
+
+    {
+        id: 48,
+        name: "Wedding Decoration Set",
+        category: "Wedding",
+        description: "A coordinated decoration set suitable for weddings and festive functions.",
+        price: 110,
+        moq: 5,
+        image: "assets/products/product-48.jpg"
+    },
+
+    {
+        id: 49,
+        name: "Pooja Gift Combo",
+        category: "Pooja",
+        description: "A thoughtful pooja gifting combination suitable for traditional celebrations.",
+        price: 90,
+        moq: 10,
+        image: "assets/products/product-49.jpg"
+    },
+
+    {
+        id: 50,
+        name: "Baby Gift Combo",
+        category: "Baby",
+        description: "A delightful baby gifting combination for birthdays, showers and celebrations.",
+        price: 100,
+        moq: 10,
+        image: "assets/products/product-50.jpg"
+    },
+
+    {
+        id: 51,
+        name: "Decorative Wall Item",
+        category: "Home Decor",
+        description: "A decorative wall piece designed to bring warmth and personality to a home.",
+        price: 150,
+        moq: 5,
+        image: "assets/products/product-51.jpg"
+    },
+
+    {
+        id: 52,
+        name: "Decorative Ribbon",
+        category: "Accessories",
+        description: "A decorative ribbon for adding a finishing touch to gift packaging.",
+        price: 18,
+        moq: 20,
+        image: "assets/products/product-52.jpg"
+    },
+
+    {
+        id: 53,
+        name: "Premium Return Gift",
+        category: "Gifts",
+        description: "A premium gifting option for customers looking for an elegant celebration gift.",
+        price: 125,
+        moq: 5,
+        image: "assets/products/product-53.jpg"
+    },
+
+    {
+        id: 54,
+        name: "Traditional Return Gift",
+        category: "Return Gifts",
+        description: "A traditional return gift suitable for Indian celebrations and family functions.",
+        price: 65,
+        moq: 10,
+        image: "assets/products/product-54.jpg"
+    },
+
+    {
+        id: 55,
+        name: "Wedding Table Decor",
+        category: "Wedding",
+        description: "An elegant table decoration suitable for wedding celebrations and functions.",
+        price: 95,
+        moq: 10,
+        image: "assets/products/product-55.jpg"
+    },
+
+    {
+        id: 56,
+        name: "Pooja Decoration Combo",
+        category: "Pooja",
+        description: "A decorative combination designed for pooja arrangements and festive occasions.",
+        price: 120,
+        moq: 5,
+        image: "assets/products/product-56.jpg"
+    },
+
+    {
+        id: 57,
+        name: "Baby Celebration Gift",
+        category: "Baby",
+        description: "A cheerful gifting option for baby celebrations, birthdays and family events.",
+        price: 90,
+        moq: 10,
+        image: "assets/products/product-57.jpg"
+    },
+
+    {
+        id: 58,
+        name: "Premium Home Decor",
+        category: "Home Decor",
+        description: "A premium decorative piece for customers looking to add an elegant touch at home.",
+        price: 180,
+        moq: 5,
+        image: "assets/products/product-58.jpg"
+    },
+
+    {
+        id: 59,
+        name: "Gift Packaging Set",
+        category: "Accessories",
+        description: "A practical packaging set for presenting gifts beautifully and professionally.",
+        price: 40,
+        moq: 20,
+        image: "assets/products/product-59.jpg"
+    },
+
+    {
+        id: 60,
+        name: "Kushii Special Gift",
+        category: "Gifts",
+        description: "A special Kushii gifting option suitable for memorable celebrations and occasions.",
+        price: 150,
+        moq: 5,
+        image: "assets/products/product-60.jpg"
+    }
+
+];
+
+
+/* =========================================================
+   CART STATE
+========================================================= */
+
+let cart =
+    JSON.parse(
+        localStorage.getItem("kushiiCart")
+    ) || {};
+
+let selectedCategory = "All";
+
+
+/* =========================================================
+   CATEGORIES
+========================================================= */
+
+const categories = [
+
+    "All",
+
+    ...new Set(
+        products.map(
+            product =>
+                product.category
+        )
+    )
+
+];
+
+
+function renderCategories() {
+
+    const container =
+        document.getElementById(
+            "categoryButtons"
+        );
+
+    container.innerHTML = "";
+
+
+    categories.forEach(category => {
+
+        const button =
+            document.createElement(
+                "button"
+            );
+
+
+        button.className =
+            "category-btn " +
+            (
+                category === selectedCategory
+                    ? "active"
+                    : ""
+            );
+
+
+        button.textContent =
+            category;
+
+
+        button.onclick = () => {
+
+            selectedCategory =
+                category;
+
+            renderCategories();
+
+            renderProducts();
+
+        };
+
+
+        container.appendChild(
+            button
+        );
+
+    });
+
+}
+
+
+/* =========================================================
+   PRODUCTS
+========================================================= */
+
+function renderProducts() {
+
+    const container =
+        document.getElementById(
+            "products"
+        );
+
+
+    const search =
+        document
+            .getElementById(
+                "searchInput"
+            )
+            .value
+            .toLowerCase()
+            .trim();
+
+
+    const filtered =
+        products.filter(
+            product => {
+
+                const matchesCategory =
+                    selectedCategory === "All" ||
+                    product.category ===
+                        selectedCategory;
+
+
+                const searchableText =
+                    (
+                        product.name +
+                        " " +
+                        product.category +
+                        " " +
+                        product.description
+                    ).toLowerCase();
+
+
+                const matchesSearch =
+                    searchableText.includes(
+                        search
+                    );
+
+
+                return (
+                    matchesCategory &&
+                    matchesSearch
+                );
+
+            }
+        );
+
+
+    document.getElementById(
+        "productCount"
+    ).textContent =
+        `${filtered.length} products`;
+
+
+    container.innerHTML = "";
+
+
+    if (
+        filtered.length === 0
+    ) {
+
+        container.innerHTML = `
+
+            <div class="empty">
+
+                <h3>
+                    No products found
+                </h3>
+
+                <p>
+                    Try another search.
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+    }
+
+
+    filtered.forEach(
+        product => {
+
+            const quantity =
+                cart[product.id] ||
+                0;
+
+
+            const card =
+                document.createElement(
+                    "div"
+                );
+
+
+            card.className =
+                "product-card";
+
+
+            card.innerHTML = `
+
+                <img
+                    class="product-image"
+                    src="${product.image}"
+                    alt="${product.name}"
+                    onerror="
+                        this.style.background='var(--blush)';
+                    "
+                >
+
+
+                <div class="product-info">
+
+
+                    <div class="product-name">
+                        ${product.name}
+                    </div>
+
+
+                    <div class="product-meta">
+                        ${product.category}
+                    </div>
+
+
+                    <div class="product-description">
+                        ${product.description}
+                    </div>
+
+
+                    <div class="product-price">
+                        ₹${product.price}
+                    </div>
+
+
+                    <div class="moq">
+                        MOQ: ${product.moq} pcs
+                    </div>
+
+
+                    <button
+                        class="
+                            add-button
+                            ${quantity > 0 ? "added" : ""}
+                        "
+                        onclick="
+                            addToCart(${product.id})
+                        "
+                    >
+
+                        ${
+                            quantity > 0
+                                ? `✓ ${quantity} in cart`
+                                : "+ ADD TO CART"
+                        }
+
+                    </button>
+
+                </div>
+
+            `;
+
+
+            container.appendChild(
+                card
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   ADD TO CART
+========================================================= */
+
+function addToCart(id) {
+
+    if (!cart[id]) {
+
+        const product =
+            products.find(
+                p =>
+                    p.id === id
+            );
+
+
+        cart[id] =
+            product.moq;
+
+    }
+    else {
+
+        cart[id] += 1;
+
+    }
+
+
+    saveCart();
+
+    renderProducts();
+
+    updateCartBar();
+
+    showToast(
+        "Added to cart"
+    );
+
+}
+
+
+/* =========================================================
+   CHANGE QUANTITY
+========================================================= */
+
+function changeQuantity(
+    id,
+    change
+) {
+
+    if (!cart[id]) return;
+
+
+    const product =
+        products.find(
+            p =>
+                p.id === Number(id)
+        );
+
+
+    cart[id] += change;
+
+
+    if (
+        cart[id] <
+        product.moq
+    ) {
+
+        cart[id] =
+            product.moq;
+
+    }
+
+
+    saveCart();
+
+    renderProducts();
+
+    renderCart();
+
+    updateCartBar();
+
+}
+
+
+/* =========================================================
+   REMOVE
+========================================================= */
+
+function removeFromCart(id) {
+
+    delete cart[id];
+
+    saveCart();
+
+    renderProducts();
+
+    renderCart();
+
+    updateCartBar();
+
+}
+
+
+/* =========================================================
+   SAVE CART
+========================================================= */
+
+function saveCart() {
+
+    localStorage.setItem(
+        "kushiiCart",
+        JSON.stringify(cart)
+    );
+
+}
+
+
+/* =========================================================
+   TOTAL
+========================================================= */
+
+function getCartTotal() {
+
+    let total = 0;
+
+
+    Object.keys(cart)
+        .forEach(
+            id => {
+
+                const product =
+                    products.find(
+                        p =>
+                            p.id ===
+                            Number(id)
+                    );
+
+
+                if (product) {
+
+                    total +=
+                        product.price *
+                        cart[id];
+
+                }
+
+            }
+        );
+
+
+    return total;
+
+}
+
+
+/* =========================================================
+   ITEM COUNT
+========================================================= */
+
+function getCartItemCount() {
+
+    return Object.values(cart)
+        .reduce(
+            (
+                sum,
+                qty
+            ) =>
+                sum + qty,
+            0
+        );
+
+}
+
+
+/* =========================================================
+   CART BAR
+========================================================= */
+
+function updateCartBar() {
+
+    document.getElementById(
+        "cartItems"
+    ).textContent =
+        `${getCartItemCount()} items`;
+
+
+    document.getElementById(
+        "cartTotal"
+    ).textContent =
+        `₹${getCartTotal().toLocaleString("en-IN")}`;
+
+}
+
+
+/* =========================================================
+   OPEN CART
+========================================================= */
+
+function openCart() {
+
+    document
+        .getElementById(
+            "overlay"
+        )
+        .classList
+        .add("show");
+
+
+    document
+        .getElementById(
+            "cartDrawer"
+        )
+        .classList
+        .add("open");
+
+
+    renderCart();
+
+}
+
+
+/* =========================================================
+   CLOSE CART
+========================================================= */
+
+function closeCart() {
+
+    document
+        .getElementById(
+            "overlay"
+        )
+        .classList
+        .remove("show");
+
+
+    document
+        .getElementById(
+            "cartDrawer"
+        )
+        .classList
+        .remove("open");
+
+}
+
+
+/* =========================================================
+   RENDER CART
+========================================================= */
+
+function renderCart() {
+
+    const container =
+        document.getElementById(
+            "cartItemsList"
+        );
+
+
+    container.innerHTML = "";
+
+
+    const ids =
+        Object.keys(cart);
+
+
+    if (
+        ids.length === 0
+    ) {
+
+        container.innerHTML = `
+
+            <div
+                style="
+                    background: white;
+                    padding: 50px 20px;
+                    text-align: center;
+                    border-radius: 12px;
+                    box-shadow: var(--shadow);
+                "
+            >
+
+                <h3>
+                    Your cart is empty
+                </h3>
+
+                <p>
+                    Browse the catalogue and
+                    add products.
+                </p>
+
+            </div>
+
+        `;
+
+    }
+
+
+    ids.forEach(
+        id => {
+
+            const product =
+                products.find(
+                    p =>
+                        p.id ===
+                        Number(id)
+                );
+
+
+            if (!product) return;
+
+
+            const quantity =
+                cart[id];
+
+
+            const item =
+                document.createElement(
+                    "div"
+                );
+
+
+            item.className =
+                "cart-item";
+
+
+            item.innerHTML = `
+
+                <img
+                    src="${product.image}"
+                    alt="${product.name}"
+                >
+
+
+                <div
+                    class="cart-item-details"
+                >
+
+                    <div
+                        class="cart-item-name"
+                    >
+                        ${product.name}
+                    </div>
+
+
+                    <div
+                        class="cart-item-price"
+                    >
+                        ₹${product.price} each
+                    </div>
+
+
+                    <div
+                        class="quantity-control"
+                    >
+
+                        <button
+                            onclick="
+                                changeQuantity(
+                                    ${product.id},
+                                    -1
+                                )
+                            "
+                        >
+                            −
+                        </button>
+
+
+                        <span>
+                            ${quantity}
+                        </span>
+
+
+                        <button
+                            onclick="
+                                changeQuantity(
+                                    ${product.id},
+                                    1
+                                )
+                            "
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+
+                    <button
+                        class="remove"
+                        onclick="
+                            removeFromCart(
+                                ${product.id}
+                            )
+                        "
+                    >
+                        Remove
+                    </button>
+
+                </div>
+
+
+                <strong>
+
+                    ₹${(
+                        product.price *
+                        quantity
+                    ).toLocaleString("en-IN")}
+
+                </strong>
+
+            `;
+
+
+            container.appendChild(
+                item
+            );
+
+        }
+    );
+
+
+    document.getElementById(
+        "drawerTotal"
+    ).textContent =
+        `₹${getCartTotal().toLocaleString("en-IN")}`;
+
+}
+
+
+/* =========================================================
+   WHATSAPP ORDER
+========================================================= */
+
+function sendWhatsAppOrder() {
+
+    const ids =
+        Object.keys(cart);
+
+
+    if (
+        ids.length === 0
+    ) {
+
+        alert(
+            "Please add products to your cart first."
+        );
+
+        return;
+
+    }
+
+
+    let message =
+        `*KUSHII GIFTS - WHOLESALE ORDER*\n\n`;
+
+
+    message +=
+        `Hello Kushii Gifts,\n\n`;
+
+
+    message +=
+        `I would like to enquire/order the following products:\n\n`;
+
+
+    let total = 0;
+
+
+    ids.forEach(
+        id => {
+
+            const product =
+                products.find(
+                    p =>
+                        p.id ===
+                        Number(id)
+                );
+
+
+            if (!product) return;
+
+
+            const quantity =
+                cart[id];
+
+
+            const itemTotal =
+                product.price *
+                quantity;
+
+
+            total +=
+                itemTotal;
+
+
+            message +=
+                `• ${product.name}\n` +
+                `  Qty: ${quantity}\n` +
+                `  Price: ₹${product.price}\n` +
+                `  Subtotal: ₹${itemTotal}\n\n`;
+
+        }
+    );
+
+
+    message +=
+        `*Estimated Total: ₹${total.toLocaleString("en-IN")}*\n\n`;
+
+
+    message +=
+        `Please confirm availability, final wholesale pricing and delivery details.\n\n`;
+
+
+    message +=
+        `Thank you.`;
+
+
+    const phone =
+        "918019093131";
+
+
+    const url =
+        "https://wa.me/" +
+        phone +
+        "?text=" +
+        encodeURIComponent(
+            message
+        );
+
+
+    window.open(
+        url,
+        "_blank"
+    );
+
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+function showToast(
+    message
+) {
+
+    const toast =
+        document.getElementById(
+            "toast"
+        );
+
+
+    toast.textContent =
+        message;
+
+
+    toast.classList.add(
+        "show"
+    );
+
+
+    setTimeout(
+        () => {
+
+            toast.classList.remove(
+                "show"
+            );
+
+        },
+        1800
+    );
+
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+document
+    .getElementById(
+        "searchInput"
+    )
+    .addEventListener(
+        "input",
+        renderProducts
+    );
+
+
+/* =========================================================
+   INITIALISE
+========================================================= */
+
+renderCategories();
+
+renderProducts();
+
+updateCartBar();
+
+
+</script>
+
+</body>
+
+</html>
