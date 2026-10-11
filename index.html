@@ -14,7 +14,7 @@
 
 <meta
     name="description"
-    content="Kushii Gifts - Wholesale gifts, return gifts, wedding supplies, pooja items and decorative products."
+    content="Kushii Gifts - Curated gifts, return gifts, wedding supplies, pooja items and decorative products."
 >
 
 <style>
@@ -1320,7 +1320,501 @@ body {
 
     color: var(--charcoal);
 }
+/* ===== KUSHII EDITORIAL REDESIGN ===== */
 
+:root {
+    --ivory: #FAF7F1;
+    --white: #FFFEFB;
+    --charcoal: #302B27;
+    --muted: #81766C;
+    --rose: #B77C72;
+    --rose-dark: #956158;
+    --blush: #F0E5DC;
+    --sage: #E6E8DF;
+    --cream-dark: #EDE4D9;
+    --shadow: 0 5px 22px rgba(57, 43, 32, .055);
+    --shadow-hover: 0 12px 30px rgba(57, 43, 32, .11);
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background: var(--ivory);
+    color: var(--charcoal);
+    letter-spacing: .01em;
+}
+
+.header {
+    height: 76px;
+    padding: 0 clamp(18px, 5vw, 72px);
+    background: rgba(250, 247, 241, .97);
+    box-shadow: 0 1px 0 rgba(48, 43, 39, .08);
+}
+
+.logo {
+    background: transparent;
+    border: 1px solid #D8C7B9;
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+}
+
+.brand {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: -.04em;
+}
+
+.brand span {
+    color: var(--rose-dark);
+}
+
+.hero {
+    padding: clamp(50px, 8vw, 100px) 20px 70px;
+    background: var(--ivory);
+    border-bottom: 1px solid #E9E0D6;
+}
+
+.hero-logo {
+    display: none;
+}
+
+.hero::before {
+    content: "THE ART OF THOUGHTFUL GIVING · CURATED WITH CARE";
+    display: block;
+    margin-bottom: 22px;
+    color: var(--rose-dark);
+    font-size: 10px;
+    letter-spacing: .18em;
+    font-weight: 700;
+}
+
+.hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: clamp(40px, 6vw, 70px);
+    line-height: 1.05;
+    letter-spacing: -.045em;
+    margin: 0 auto 20px;
+    max-width: 850px;
+}
+
+.hero p {
+    max-width: 620px;
+    margin: auto;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.search-wrapper {
+    max-width: 1160px;
+    margin: 28px auto 12px;
+    padding: 0 22px;
+}
+
+.search {
+    height: 52px;
+    border-radius: 2px;
+    background: transparent;
+    border: 1px solid #DED4C9;
+    box-shadow: none;
+    font-size: 14px;
+}
+
+.search:focus {
+    border-color: var(--rose-dark);
+    box-shadow: 0 0 0 2px rgba(149, 97, 88, .08);
+}
+
+.categories {
+    max-width: 1160px;
+    padding: 18px 22px 24px;
+    gap: 8px;
+}
+
+.category-btn {
+    border-radius: 2px;
+    background: transparent;
+    border-color: #DED4C9;
+    padding: 10px 15px;
+    font-size: 11px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+}
+
+.category-btn.active {
+    background: var(--charcoal);
+    color: white;
+    border-color: var(--charcoal);
+    box-shadow: none;
+}
+
+.container {
+    max-width: 1240px;
+    padding: 22px 22px 155px;
+}
+
+.catalogue-title {
+    gap: 20px;
+    align-items: end;
+    margin: 26px 0 28px;
+}
+
+.eyebrow {
+    color: var(--rose-dark);
+    font-size: 10px;
+    letter-spacing: .16em;
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+.catalogue-title h2,
+.category-heading {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: clamp(27px, 3vw, 38px);
+    letter-spacing: -.035em;
+    line-height: 1.15;
+    margin: 0;
+}
+
+.product-count {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.sort-control {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--muted);
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.sort-control select {
+    max-width: 190px;
+    padding: 11px 12px;
+    background: transparent;
+    color: var(--charcoal);
+    border: 1px solid #DED4C9;
+    border-radius: 2px;
+    font: inherit;
+}
+
+.category-section {
+    margin: 0 0 54px;
+    scroll-margin-top: 100px;
+}
+
+.category-section-header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 0 0 20px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid #DED4C9;
+}
+
+.category-heading {
+    font-size: clamp(24px, 3vw, 32px);
+}
+
+.category-subtitle {
+    margin: 6px 0 0;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px 18px;
+}
+
+.product-card {
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+    min-width: 0;
+}
+
+.product-card:hover {
+    transform: translateY(-2px);
+    box-shadow: none;
+}
+
+.product-image {
+    display: block;
+    aspect-ratio: 4 / 4.5;
+    border-radius: 2px;
+    background: #F0E8DE;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 13px 0 0;
+}
+
+.product-name {
+    min-height: auto;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.product-meta {
+    margin-top: 7px;
+    color: var(--rose-dark);
+    font-size: 10px;
+    letter-spacing: .1em;
+}
+
+.product-description {
+    min-height: 34px;
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.product-price {
+    margin-top: 12px;
+    color: var(--charcoal);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.moq {
+    margin-top: 5px;
+    font-size: 11px;
+}
+
+.quantity-entry {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.quantity-entry label {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.quantity-entry input {
+    width: 76px;
+    min-width: 0;
+    height: 40px;
+    padding: 0 9px;
+    border: 1px solid #DED4C9;
+    border-radius: 2px;
+    background: var(--white);
+    color: var(--charcoal);
+    font-size: 14px;
+}
+
+.add-button {
+    height: 42px;
+    margin-top: 9px;
+    border-radius: 2px;
+    border: 1px solid var(--charcoal);
+    background: var(--charcoal);
+    color: white;
+    font-size: 10px;
+    letter-spacing: .1em;
+    transition: background .2s, color .2s;
+}
+
+.add-button:hover,
+.add-button.added {
+    background: var(--rose-dark);
+    border-color: var(--rose-dark);
+    color: white;
+}
+
+.cart-bar {
+    background: rgba(250, 247, 241, .98);
+    border-top: 1px solid #DED4C9;
+    color: var(--charcoal);
+    padding: 13px 20px;
+    box-shadow: 0 -5px 22px rgba(57, 43, 32, .06);
+}
+
+.cart-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+}
+
+.cart-items {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.cart-total {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.cart-note {
+    color: var(--muted);
+    font-size: 10px;
+    line-height: 1.4;
+    margin-top: 3px;
+}
+
+.view-cart {
+    border-radius: 2px;
+    background: var(--charcoal);
+    padding: 14px 22px;
+    font-size: 11px;
+    letter-spacing: .08em;
+}
+
+.view-cart:hover {
+    background: var(--rose-dark);
+}
+
+.cart-drawer {
+    background: var(--ivory);
+}
+
+.cart-header,
+.cart-footer {
+    background: var(--ivory);
+    border-color: #DED4C9;
+}
+
+.cart-header h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.minimum-order {
+    background: #F0E8DE;
+    border: 1px solid #E5D8CB;
+    border-radius: 2px;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.cart-item {
+    border-radius: 2px;
+    box-shadow: none;
+    border: 1px solid #E8DED3;
+}
+
+.cart-item img {
+    border-radius: 2px;
+}
+
+.quantity-control button {
+    border-radius: 2px;
+}
+
+.enquiry-note {
+    display: block;
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.price-unavailable {
+    color: var(--rose-dark);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.whatsapp-button {
+    border-radius: 2px;
+    font-size: 12px;
+    letter-spacing: .06em;
+}
+
+@media (max-width: 900px) {
+    .products {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px 14px;
+    }
+}
+
+@media (max-width: 650px) {
+    .header {
+        height: 64px;
+    }
+
+    .hero {
+        padding: 58px 22px 52px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .catalogue-title {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .sort-control {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .sort-control select {
+        flex: 1;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px 12px;
+    }
+
+    .product-name {
+        font-size: 16px;
+    }
+
+    .product-description {
+        min-height: 40px;
+    }
+
+    .cart-summary {
+        gap: 3px;
+    }
+
+    .cart-total {
+        display: block;
+        font-size: 15px;
+    }
+
+    .view-cart {
+        padding: 12px 15px;
+        font-size: 10px;
+    }
+
+    .cart-note {
+        max-width: 205px;
+    }
+}
+
+@media (max-width: 380px) {
+    .cart-inner {
+        gap: 10px;
+    }
+
+    .cart-total {
+        display: block;
+    }
+}
 </style>
 
 </head>
@@ -1333,6 +1827,7 @@ body {
      HEADER
 ===================================================== -->
 
+<!--       
 <header class="header">
 
     <div class="logo">
@@ -1344,6 +1839,8 @@ body {
     </div>
 
 </header>
+-->
+
 
 
 <!-- =====================================================
@@ -1359,7 +1856,7 @@ body {
     <h1>Kushii Gifts</h1>
 
     <p>
-        Wholesale Gifts • Return Gifts • Wedding • Pooja • Decor
+        Corporate Gifting & Return Gifts for all Occasions
     </p>
 
 </section>
@@ -1397,27 +1894,24 @@ body {
 
 <main class="container">
 
-    <div class="catalogue-title">
-
-        <h2>
-            Our Catalogue
-        </h2>
-
-        <span
-            id="productCount"
-            class="product-count"
-        >
-            60 products
-        </span>
-
+<div class="catalogue-title">
+    <div class="catalogue-heading-copy">
+        <p class="eyebrow">THE KUSHII COLLECTION</p>
+        <h2>Thoughtful gifts, beautifully chosen.</h2>
+        <span id="productCount" class="product-count">Products</span>
     </div>
 
+    <label class="sort-control">
+        <span>Sort by</span>
+        <select id="sortSelect" aria-label="Sort products by price">
+            <option value="default">Recommended</option>
+            <option value="low-high">Price: Low to high</option>
+            <option value="high-low">Price: High to low</option>
+        </select>
+    </label>
+</div>
 
-    <div
-        id="products"
-        class="products"
-    ></div>
-
+<div id="products"></div>
 </main>
 
 
@@ -1443,6 +1937,10 @@ body {
                 class="cart-total"
             >
                 ₹0
+            </div>
+
+            <div class="cart-note">
+                Enquiry only. No payment required at this stage
             </div>
 
         </div>
@@ -1499,16 +1997,14 @@ body {
     <div class="cart-body">
 
         <div class="minimum-order">
+            <strong>Your gifting selection</strong>
+            <br><br>
+            Review your chosen products and quantities, then share your enquiry with Kushii Gifts on WhatsApp.
 
-            🛒
-            <strong>Wholesale Order</strong>
-
-            <br>
-
-            Add products to your cart and send the
-            complete requirement directly to Kushii Gifts
-            on WhatsApp.
-
+            <span class="enquiry-note">
+                This is a product enquiry, not a payment or confirmed order.
+                We'll confirm availability, final pricing and delivery details with you.
+            </span>
         </div>
 
 
@@ -1536,7 +2032,7 @@ body {
             class="whatsapp-button"
             onclick="sendWhatsAppOrder()"
         >
-            💬 SEND ORDER ON WHATSAPP
+            💬 SEND ENQUIRY ON WHATSAPP
         </button>
 
     </div>
@@ -1582,607 +2078,780 @@ body {
 
 
 const products = [
-
     {
         id: 1,
-        name: "Wooden tray with cow",
-        category: "Gifts",
-        description: "8 inch x 8 inch weighs about 120 gms",
-        price: 250,
+        name: "Copper Glass Set",
+        category: "BRASS",
+        description: "Standard glass size",
+        price: 900,
         moq: 30,
         image: "assets/products/product-01.jpg"
     },
-
     {
         id: 2,
-        name: "Metal box",
-        category: "Return Gifts",
-        description: "6 inch x 6 inch weighs about 90 gms",
-        price: 150,
-        moq: 10,
+        name: "Spice Box",
+        category: "BRASS",
+        description: "Weight 200 gms; 4 inches",
+        price: 640,
+        moq: 30,
         image: "assets/products/product-02.jpg"
     },
-
     {
         id: 3,
-        name: "Traditional key holder",
-        category: "Wedding",
-        description: "4 inch x 6 inch weighs about 60 gms",
-        price: 90,
-        moq: 50,
+        name: "Prasadam Bowl",
+        category: "BRASS",
+        description: "Weight 65 gms; width as shown in image",
+        price: 385,
+        moq: 1,
         image: "assets/products/product-03.jpg"
     },
-
     {
         id: 4,
-        name: "Pooja Decorative Item",
-        category: "Pooja",
-        description: "5 inch x 5 inch weighs about 150 gms",
-        price: 400,
-        moq: 10,
+        name: "Spice Box",
+        category: "BRASS",
+        description: "550 gms; 6 inches",
+        price: 1200,
+        moq: 1,
         image: "assets/products/product-04.jpg"
     },
-
     {
         id: 5,
-        name: "Baby Gift Item",
-        category: "Baby",
-        description: "A delightful gifting option for baby celebrations, birthdays and family occasions.",
-        price: 40,
-        moq: 10,
-        image: "assets/products/product-05.jpg"
+        name: "Gangalam",
+        category: "BRASS",
+        description: "50–90 gms; price range ₹250–₹380",
+        price: 250,
+        moq: 1,
+        image: "assets/products/product-05.jpeg"
     },
-
     {
         id: 6,
-        name: "Home Decor Item",
-        category: "Home Decor",
-        description: "A stylish decorative piece that adds a warm and welcoming touch to the home.",
-        price: 50,
-        moq: 10,
-        image: "assets/products/product-06.jpg"
+        name: "Spice Box",
+        category: "BRASS",
+        description: "200 gms; 4 inches",
+        price: 640,
+        moq: 1,
+        image: "assets/products/product-06.jpeg"
     },
-
     {
         id: 7,
-        name: "Gift Accessory",
-        category: "Accessories",
-        description: "A useful accessory for completing gift packaging and presentation.",
-        price: 20,
-        moq: 10,
-        image: "assets/products/product-07.jpg"
+        name: "Coffee Dabra Set",
+        category: "BRASS",
+        description: "120 gms",
+        price: 440,
+        moq: 1,
+        image: "assets/products/product-07.jpeg"
     },
-
     {
         id: 8,
-        name: "Premium Return Gift",
-        category: "Return Gifts",
-        description: "A premium return gifting option for special celebrations and memorable occasions.",
-        price: 60,
-        moq: 10,
-        image: "assets/products/product-08.jpg"
+        name: "Ghee Pot",
+        category: "BRASS",
+        description: "Size 1",
+        price: 850,
+        moq: 1,
+        image: "assets/products/product-08.jpeg"
     },
-
     {
         id: 9,
-        name: "Wedding Gift Decoration",
-        category: "Wedding",
-        description: "A beautiful wedding decoration suitable for gifting tables and celebration spaces.",
-        price: 75,
-        moq: 10,
-        image: "assets/products/product-09.jpg"
+        name: "Shanku Chakra Diyas",
+        category: "BRASS",
+        description: "Available in 2 sizes; price range ₹425–₹540",
+        price: 425,
+        moq: 1,
+        image: "assets/products/product-09.jpeg"
     },
-
     {
         id: 10,
-        name: "Pooja Gift Set",
-        category: "Pooja",
-        description: "A thoughtful gifting set suitable for traditional pooja and festive occasions.",
-        price: 55,
-        moq: 10,
-        image: "assets/products/product-10.jpg"
+        name: "Lotus Stand",
+        category: "BRASS",
+        description: "4 inches",
+        price: 340,
+        moq: 1,
+        image: "assets/products/product-10.jpeg"
     },
-
     {
         id: 11,
-        name: "Decorative Gift",
-        category: "Gifts",
-        description: "A cheerful decorative gift suitable for festivals, celebrations and everyday gifting.",
-        price: 35,
-        moq: 10,
-        image: "assets/products/product-11.jpg"
+        name: "Lotus Diyas",
+        category: "BRASS",
+        description: "Available in 2 sizes",
+        price: 430,
+        moq: 1,
+        image: "assets/products/product-11.jpeg"
     },
-
     {
         id: 12,
-        name: "Return Gift Set",
-        category: "Return Gifts",
-        description: "A convenient return gift set for parties, family events and celebrations.",
-        price: 40,
-        moq: 10,
-        image: "assets/products/product-12.jpg"
+        name: "Peacock Bowl",
+        category: "BRASS",
+        description: "140 gms; 3 inches",
+        price: 435,
+        moq: 1,
+        image: "assets/products/product-12.jpeg"
     },
-
     {
         id: 13,
-        name: "Wedding Accessory",
-        category: "Wedding",
-        description: "A useful and attractive accessory for wedding gifting and decoration.",
-        price: 35,
-        moq: 10,
-        image: "assets/products/product-13.jpg"
+        name: "Gangalam",
+        category: "BRASS",
+        description: "150 gms; 3.5 inches",
+        price: 520,
+        moq: 1,
+        image: "assets/products/product-13.jpeg"
     },
-
     {
         id: 14,
-        name: "Pooja Accessory",
-        category: "Pooja",
-        description: "A traditional accessory suitable for pooja arrangements and festive gifting.",
-        price: 25,
-        moq: 10,
-        image: "assets/products/product-14.jpg"
+        name: "Ghee Pot",
+        category: "BRASS",
+        description: "Size 1",
+        price: 850,
+        moq: 1,
+        image: "assets/products/product-14.jpeg"
     },
-
     {
         id: 15,
-        name: "Baby Return Gift",
-        category: "Baby",
-        description: "A sweet return gift option for baby showers, birthdays and family celebrations.",
-        price: 45,
-        moq: 10,
+        name: "Parrot Kumkum Holder",
+        category: "WOODEN HANDICRAFTS",
+        description: "Size as shown in image",
+        price: 160,
+        moq: 1,
         image: "assets/products/product-15.jpg"
     },
-
     {
         id: 16,
-        name: "Home Decoration",
-        category: "Home Decor",
-        description: "A warm decorative addition for homes, festive displays and gifting.",
-        price: 65,
-        moq: 10,
+        name: "Balaji Kumkum Holder",
+        category: "WOODEN HANDICRAFTS",
+        description: "Size as shown in image",
+        price: 260,
+        moq: 1,
         image: "assets/products/product-16.jpg"
     },
-
     {
         id: 17,
-        name: "Gift Packaging",
-        category: "Accessories",
-        description: "A practical packaging option for presenting gifts beautifully.",
-        price: 15,
-        moq: 20,
+        name: "Thambulam Kumkum Set",
+        category: "WOODEN HANDICRAFTS",
+        description: "Size as shown in image",
+        price: 230,
+        moq: 1,
         image: "assets/products/product-17.jpg"
     },
-
     {
         id: 18,
-        name: "Premium Gift",
-        category: "Gifts",
-        description: "An elegant gifting choice for customers looking for something special.",
-        price: 80,
-        moq: 10,
+        name: "Raja Rani Kumkum Holder",
+        category: "WOODEN HANDICRAFTS",
+        description: "Size as shown in image",
+        price: 220,
+        moq: 1,
         image: "assets/products/product-18.jpg"
     },
-
     {
         id: 19,
-        name: "Traditional Return Gift",
-        category: "Return Gifts",
-        description: "A traditional gifting option suited to Indian celebrations and family occasions.",
-        price: 30,
-        moq: 10,
+        name: "Balaji Idols",
+        category: "WOODEN HANDICRAFTS",
+        description: "Size as shown in image",
+        price: 150,
+        moq: 1,
         image: "assets/products/product-19.jpg"
     },
-
     {
         id: 20,
-        name: "Wedding Gift",
-        category: "Wedding",
-        description: "A thoughtful wedding gifting option for celebrations and special moments.",
-        price: 90,
-        moq: 10,
+        name: "Balaji Idols",
+        category: "WOODEN HANDICRAFTS",
+        description: "Size as shown in image",
+        price: 460,
+        moq: 1,
         image: "assets/products/product-20.jpg"
     },
-
     {
         id: 21,
-        name: "Pooja Decoration",
-        category: "Pooja",
-        description: "A decorative item for pooja spaces, festive occasions and traditional celebrations.",
-        price: 35,
-        moq: 10,
+        name: "Parrot Kumkum Holder",
+        category: "WOODEN HANDICRAFTS",
+        description: "Size as shown in image",
+        price: 230,
+        moq: 1,
         image: "assets/products/product-21.jpg"
     },
-
     {
         id: 22,
-        name: "Baby Gift",
-        category: "Baby",
-        description: "A cheerful baby gifting option suitable for birthdays and family celebrations.",
-        price: 70,
-        moq: 10,
+        name: "Balaji Idols",
+        category: "WOODEN HANDICRAFTS",
+        description: "Size as shown in image",
+        price: 170,
+        moq: 1,
         image: "assets/products/product-22.jpg"
     },
-
     {
         id: 23,
-        name: "Home Decor",
-        category: "Home Decor",
-        description: "A stylish home decoration piece designed to add warmth to any space.",
-        price: 75,
-        moq: 10,
+        name: "Balaji Idols",
+        category: "WOODEN HANDICRAFTS",
+        description: "Size as shown in image; price not provided",
+        price: 0,
+        moq: 1,
         image: "assets/products/product-23.jpg"
     },
-
     {
         id: 24,
-        name: "Gift Ribbon",
-        category: "Accessories",
-        description: "A useful decorative ribbon for finishing gift packaging beautifully.",
-        price: 20,
-        moq: 20,
+        name: "Balaji Idols",
+        category: "WOODEN HANDICRAFTS",
+        description: "Size as shown in image",
+        price: 800,
+        moq: 1,
         image: "assets/products/product-24.jpg"
     },
-
     {
         id: 25,
-        name: "Festive Gift Item",
-        category: "Gifts",
-        description: "A festive gifting option for celebrations, festivals and special occasions.",
-        price: 50,
-        moq: 10,
+        name: "Balaji Idols",
+        category: "WOODEN HANDICRAFTS",
+        description: "Size as shown in image",
+        price: 400,
+        moq: 1,
         image: "assets/products/product-25.jpg"
     },
-
     {
         id: 26,
-        name: "Return Gift Decoration",
-        category: "Return Gifts",
-        description: "A decorative return gift suitable for celebrations and special events.",
-        price: 45,
-        moq: 10,
+        name: "Balaji Idols",
+        category: "WOODEN HANDICRAFTS",
+        description: "Size as shown in image",
+        price: 175,
+        moq: 1,
         image: "assets/products/product-26.jpg"
     },
-
     {
         id: 27,
-        name: "Wedding Decoration",
-        category: "Wedding",
-        description: "A beautiful decoration option for wedding celebrations and special functions.",
-        price: 55,
-        moq: 10,
+        name: "Balaji Idol with Bag",
+        category: "WOODEN HANDICRAFTS",
+        description: "Size as shown in image",
+        price: 250,
+        moq: 1,
         image: "assets/products/product-27.jpg"
     },
-
     {
         id: 28,
-        name: "Pooja Gift",
-        category: "Pooja",
-        description: "A traditional gifting option suitable for pooja, festivals and family occasions.",
-        price: 45,
-        moq: 10,
-        image: "assets/products/product-28.jpg"
+        name: "Wooden Tray",
+        category: "WOODEN GIFT ITEMS",
+        description: "8.5 x 8.5 inches",
+        price: 420,
+        moq: 1,
+        image: "assets/products/product-28.jpeg"
     },
-
     {
         id: 29,
-        name: "Baby Gift Set",
-        category: "Baby",
-        description: "A charming baby gift set suitable for birthdays, showers and celebrations.",
-        price: 85,
-        moq: 10,
-        image: "assets/products/product-29.jpg"
+        name: "Wooden Tray",
+        category: "WOODEN GIFT ITEMS",
+        description: "8.5 x 8.5 inches",
+        price: 420,
+        moq: 1,
+        image: "assets/products/product-29.jpeg"
     },
-
     {
         id: 30,
-        name: "Decorative Showpiece",
-        category: "Home Decor",
-        description: "An elegant showpiece suitable for home decoration and premium gifting.",
-        price: 120,
-        moq: 5,
-        image: "assets/products/product-30.jpg"
+        name: "Wooden Tray",
+        category: "WOODEN GIFT ITEMS",
+        description: "8.5 x 8.5 inches",
+        price: 420,
+        moq: 1,
+        image: "assets/products/product-30.jpeg"
     },
-
     {
         id: 31,
-        name: "Gift Box",
-        category: "Accessories",
-        description: "A practical gift box for presenting products in a neat and attractive way.",
-        price: 30,
-        moq: 20,
-        image: "assets/products/product-31.jpg"
+        name: "Wooden Tray",
+        category: "WOODEN GIFT ITEMS",
+        description: "8.5 x 8.5 inches",
+        price: 420,
+        moq: 1,
+        image: "assets/products/product-31.jpeg"
     },
-
     {
         id: 32,
-        name: "Traditional Gift",
-        category: "Gifts",
-        description: "A traditional gifting choice inspired by Indian celebrations and family occasions.",
-        price: 65,
-        moq: 10,
-        image: "assets/products/product-32.jpg"
+        name: "Wooden Tray",
+        category: "WOODEN GIFT ITEMS",
+        description: "8.5 x 8.5 inches",
+        price: 420,
+        moq: 1,
+        image: "assets/products/product-32.jpeg"
     },
-
     {
         id: 33,
-        name: "Return Gift Pack",
-        category: "Return Gifts",
-        description: "A convenient return gift pack for parties, functions and celebrations.",
-        price: 55,
-        moq: 10,
-        image: "assets/products/product-33.jpg"
+        name: "Wooden Tray",
+        category: "WOODEN GIFT ITEMS",
+        description: "8.5 x 8.5 inches",
+        price: 420,
+        moq: 1,
+        image: "assets/products/product-33.jpeg"
     },
-
     {
         id: 34,
-        name: "Wedding Return Gift",
-        category: "Wedding",
-        description: "A thoughtful return gift option for weddings and family celebrations.",
-        price: 70,
-        moq: 10,
-        image: "assets/products/product-34.jpg"
+        name: "Wooden Tray",
+        category: "WOODEN GIFT ITEMS",
+        description: "8.5 x 8.5 inches",
+        price: 420,
+        moq: 1,
+        image: "assets/products/product-34.jpeg"
     },
-
     {
         id: 35,
-        name: "Pooja Thali Accessory",
-        category: "Pooja",
-        description: "A traditional accessory designed for pooja thali arrangements and festive gifting.",
-        price: 100,
-        moq: 5,
-        image: "assets/products/product-35.jpg"
+        name: "Wooden Tray",
+        category: "WOODEN GIFT ITEMS",
+        description: "8.5 x 8.5 inches",
+        price: 420,
+        moq: 1,
+        image: "assets/products/product-35.jpeg"
     },
-
     {
         id: 36,
-        name: "Baby Decoration",
-        category: "Baby",
-        description: "A cheerful decorative piece for baby celebrations and special family occasions.",
-        price: 45,
-        moq: 10,
-        image: "assets/products/product-36.jpg"
+        name: "Korai Bag",
+        category: "KORAI GIFTS",
+        description: "8 x 8 inches",
+        price: 180,
+        moq: 1,
+        image: "assets/products/product-36.jpeg"
     },
-
     {
         id: 37,
-        name: "Decorative Lamp",
-        category: "Home Decor",
-        description: "A warm decorative lamp suitable for homes, festive displays and gifting.",
-        price: 150,
-        moq: 5,
-        image: "assets/products/product-37.jpg"
+        name: "Raw Silk Bag",
+        category: "JUTE BAGS",
+        description: "9 x 9 x 4 inches",
+        price: 190,
+        moq: 1,
+        image: "assets/products/product-37.jpeg"
     },
-
     {
         id: 38,
-        name: "Decorative Accessory",
-        category: "Accessories",
-        description: "A versatile decorative accessory for gifts, displays and celebrations.",
-        price: 25,
-        moq: 20,
-        image: "assets/products/product-38.jpg"
+        name: "Premium Paithani Clutch",
+        category: "CLUTCHES",
+        description: "Standard sizes",
+        price: 820,
+        moq: 1,
+        image: "assets/products/product-38.jpeg"
     },
-
     {
         id: 39,
-        name: "Premium Gift Box",
-        category: "Gifts",
-        description: "A premium gift box designed to make special gifting moments feel more memorable.",
-        price: 90,
-        moq: 10,
-        image: "assets/products/product-39.jpg"
+        name: "Premium Paithani Clutch",
+        category: "CLUTCHES",
+        description: "Standard sizes",
+        price: 850,
+        moq: 1,
+        image: "assets/products/product-39.jpeg"
     },
-
     {
         id: 40,
-        name: "Return Gift Decoration",
-        category: "Return Gifts",
-        description: "A charming decorative return gift for celebrations and special occasions.",
-        price: 50,
-        moq: 10,
-        image: "assets/products/product-40.jpg"
+        name: "Premium Paithani Clutch",
+        category: "CLUTCHES",
+        description: "Standard sizes",
+        price: 850,
+        moq: 1,
+        image: "assets/products/product-40.jpeg"
     },
-
     {
         id: 41,
-        name: "Wedding Favour",
-        category: "Wedding",
-        description: "A thoughtful wedding favour suitable for guests and special celebrations.",
-        price: 65,
-        moq: 10,
-        image: "assets/products/product-41.jpg"
+        name: "Semi Patola Clutch",
+        category: "CLUTCHES",
+        description: "Standard sizes",
+        price: 850,
+        moq: 1,
+        image: "assets/products/product-41.jpeg"
     },
-
     {
         id: 42,
-        name: "Pooja Decorative Set",
-        category: "Pooja",
-        description: "A traditional decorative set for pooja spaces and festive celebrations.",
-        price: 80,
-        moq: 10,
-        image: "assets/products/product-42.jpg"
+        name: "Semi Patola Clutch",
+        category: "CLUTCHES",
+        description: "Standard sizes",
+        price: 850,
+        moq: 1,
+        image: "assets/products/product-42.jpeg"
     },
-
     {
         id: 43,
-        name: "Baby Shower Gift",
-        category: "Baby",
-        description: "A delightful gift option for baby showers and family celebrations.",
-        price: 95,
-        moq: 10,
-        image: "assets/products/product-43.jpg"
+        name: "Semi Patola Clutch",
+        category: "CLUTCHES",
+        description: "Standard sizes",
+        price: 850,
+        moq: 1,
+        image: "assets/products/product-43.jpeg"
     },
-
     {
         id: 44,
-        name: "Decorative Tray",
-        category: "Home Decor",
-        description: "A decorative tray suitable for gifting, displays and home decoration.",
-        price: 130,
-        moq: 5,
-        image: "assets/products/product-44.jpg"
+        name: "Semi Patola Clutch",
+        category: "CLUTCHES",
+        description: "Standard sizes",
+        price: 850,
+        moq: 1,
+        image: "assets/products/product-44.jpeg"
     },
-
-    {
-        id: 45,
-        name: "Gift Bag",
-        category: "Accessories",
-        description: "A practical gift bag for presenting products beautifully and conveniently.",
-        price: 20,
-        moq: 20,
-        image: "assets/products/product-45.jpg"
-    },
-
     {
         id: 46,
-        name: "Festival Gift",
-        category: "Gifts",
-        description: "A cheerful festival gifting option for Indian celebrations and special occasions.",
-        price: 75,
-        moq: 10,
+        name: "Brocade Jewellery Box",
+        category: "JEWELLERY BOX",
+        description: "6 x 6 inches",
+        price: 450,
+        moq: 1,
         image: "assets/products/product-46.jpg"
     },
-
     {
         id: 47,
-        name: "Return Gift Combo",
-        category: "Return Gifts",
-        description: "A convenient return gift combination for celebrations and family functions.",
-        price: 85,
-        moq: 10,
+        name: "Korai Box",
+        category: "KORAI GIFTS",
+        description: "6 x 6 inches",
+        price: 380,
+        moq: 1,
         image: "assets/products/product-47.jpg"
     },
-
     {
         id: 48,
-        name: "Wedding Decoration Set",
-        category: "Wedding",
-        description: "A coordinated decoration set suitable for weddings and festive functions.",
-        price: 110,
-        moq: 5,
+        name: "Palm Box",
+        category: "PALM BOX",
+        description: "4 x 4 inches",
+        price: 120,
+        moq: 1,
         image: "assets/products/product-48.jpg"
     },
-
     {
         id: 49,
-        name: "Pooja Gift Combo",
-        category: "Pooja",
-        description: "A thoughtful pooja gifting combination suitable for traditional celebrations.",
-        price: 90,
-        moq: 10,
+        name: "Jute Bag",
+        category: "JUTE BAGS",
+        description: "9 x 9 inches",
+        price: 195,
+        moq: 1,
         image: "assets/products/product-49.jpg"
     },
-
     {
         id: 50,
-        name: "Baby Gift Combo",
-        category: "Baby",
-        description: "A delightful baby gifting combination for birthdays, showers and celebrations.",
-        price: 100,
-        moq: 10,
+        name: "Metal Design Jar",
+        category: "METAL JARS",
+        description: "4 inches",
+        price: 250,
+        moq: 1,
         image: "assets/products/product-50.jpg"
     },
-
     {
         id: 51,
-        name: "Decorative Wall Item",
-        category: "Home Decor",
-        description: "A decorative wall piece designed to bring warmth and personality to a home.",
-        price: 150,
-        moq: 5,
+        name: "Metal Design Jar",
+        category: "METAL JARS",
+        description: "5 inches",
+        price: 340,
+        moq: 1,
         image: "assets/products/product-51.jpg"
     },
-
     {
         id: 52,
-        name: "Decorative Ribbon",
-        category: "Accessories",
-        description: "A decorative ribbon for adding a finishing touch to gift packaging.",
-        price: 18,
-        moq: 20,
+        name: "Metal Design Jar",
+        category: "METAL JARS",
+        description: "3 inches",
+        price: 210,
+        moq: 1,
         image: "assets/products/product-52.jpg"
     },
-
     {
         id: 53,
-        name: "Premium Return Gift",
-        category: "Gifts",
-        description: "A premium gifting option for customers looking for an elegant celebration gift.",
-        price: 125,
-        moq: 5,
-        image: "assets/products/product-53.jpg"
+        name: "Diyas in Potli",
+        category: "HAMPER",
+        description: "Diyas in Potli Bag",
+        price: 450,
+        moq: 1,
+        image: "assets/products/product-53.jpeg"
     },
-
     {
         id: 54,
-        name: "Traditional Return Gift",
-        category: "Return Gifts",
-        description: "A traditional return gift suitable for Indian celebrations and family functions.",
-        price: 65,
-        moq: 10,
-        image: "assets/products/product-54.jpg"
+        name: "Key Holder",
+        category: "WOODEN GIFT ITEMS",
+        description: "5 x 7 inches",
+        price: 195,
+        moq: 1,
+        image: "assets/products/product-54.jpeg"
     },
-
     {
         id: 55,
-        name: "Wedding Table Decor",
-        category: "Wedding",
-        description: "An elegant table decoration suitable for wedding celebrations and functions.",
-        price: 95,
-        moq: 10,
-        image: "assets/products/product-55.jpg"
+        name: "Key Holder",
+        category: "WOODEN GIFT ITEMS",
+        description: "5 x 7 inches",
+        price: 195,
+        moq: 1,
+        image: "assets/products/product-55.jpeg"
     },
-
     {
         id: 56,
-        name: "Pooja Decoration Combo",
-        category: "Pooja",
-        description: "A decorative combination designed for pooja arrangements and festive occasions.",
-        price: 120,
-        moq: 5,
-        image: "assets/products/product-56.jpg"
+        name: "Key Holder",
+        category: "WOODEN GIFT ITEMS",
+        description: "5 x 7 inches",
+        price: 195,
+        moq: 1,
+        image: "assets/products/product-56.jpeg"
     },
-
     {
         id: 57,
-        name: "Baby Celebration Gift",
-        category: "Baby",
-        description: "A cheerful gifting option for baby celebrations, birthdays and family events.",
-        price: 90,
-        moq: 10,
-        image: "assets/products/product-57.jpg"
+        name: "Kumkum Holder",
+        category: "BRASS",
+        description: "2 inches",
+        price: 165,
+        moq: 1,
+        image: "assets/products/product-57.jpeg"
     },
-
     {
         id: 58,
-        name: "Premium Home Decor",
-        category: "Home Decor",
-        description: "A premium decorative piece for customers looking to add an elegant touch at home.",
-        price: 180,
-        moq: 5,
-        image: "assets/products/product-58.jpg"
+        name: "Korai Basket",
+        category: "KORAI GIFTS",
+        description: "5 x 4 inches",
+        price: 420,
+        moq: 1,
+        image: "assets/products/product-58.jpeg"
     },
-
     {
         id: 59,
-        name: "Gift Packaging Set",
-        category: "Accessories",
-        description: "A practical packaging set for presenting gifts beautifully and professionally.",
-        price: 40,
-        moq: 20,
-        image: "assets/products/product-59.jpg"
+        name: "Key Holder",
+        category: "WOODEN GIFT ITEMS",
+        description: "5 x 7 inches",
+        price: 195,
+        moq: 1,
+        image: "assets/products/product-59.jpeg"
     },
-
     {
         id: 60,
-        name: "Kushii Special Gift",
-        category: "Gifts",
-        description: "A special Kushii gifting option suitable for memorable celebrations and occasions.",
-        price: 150,
-        moq: 5,
-        image: "assets/products/product-60.jpg"
+        name: "Spiritual Book",
+        category: "WOODEN GIFT ITEMS",
+        description: "Standard size",
+        price: 110,
+        moq: 1,
+        image: "assets/products/product-60.jpeg"
+    },
+    {
+        id: 61,
+        name: "Annapakshi Diyas",
+        category: "BRASS",
+        description: "",
+        price: 800,
+        moq: 1,
+        image: "assets/products/product-61.jpeg"
+    },
+    {
+        id: 62,
+        name: "Kolam Tray",
+        category: "METAL JARS",
+        description: "8 inches",
+        price: 270,
+        moq: 1,
+        image: "assets/products/product-62.jpeg"
+    },
+    {
+        id: 64,
+        name: "Shanku Chakra Bowl",
+        category: "BRASS",
+        description: "65 gms",
+        price: 400,
+        moq: 1,
+        image: "assets/products/product-64.jpeg"
+    },
+    {
+        id: 66,
+        name: "Gangalam",
+        category: "BRASS",
+        description: "140 gms; 3.5 inches; price not provided",
+        price: 0,
+        moq: 1,
+        image: "assets/products/product-66.jpeg"
+    },
+    {
+        id: 68,
+        name: "Pichwai Box",
+        category: "JEWELLERY BOX",
+        description: "4 x 4 inches",
+        price: 160,
+        moq: 1,
+        image: "assets/products/product-68.jpeg"
+    },
+    {
+        id: 69,
+        name: "Traditional Woman",
+        category: "WOODEN HANDICRAFTS",
+        description: "4 inches",
+        price: 380,
+        moq: 1,
+        image: "assets/products/product-69.jpeg"
+    },
+    {
+        id: 70,
+        name: "Traditional Bride & Groom",
+        category: "WOODEN HANDICRAFTS",
+        description: "4 inches",
+        price: 600,
+        moq: 1,
+        image: "assets/products/product-70.jpeg"
+    },
+    {
+        id: 71,
+        name: "Thambulam Woman",
+        category: "WOODEN HANDICRAFTS",
+        description: "4 inches",
+        price: 380,
+        moq: 1,
+        image: "assets/products/product-71.jpeg"
+    },
+    {
+        id: 72,
+        name: "Lord Ram & Sita",
+        category: "WOODEN HANDICRAFTS",
+        description: "4 inches",
+        price: 600,
+        moq: 1,
+        image: "assets/products/product-72.jpeg"
+    },
+    {
+        id: 73,
+        name: "Prasadam Bowl",
+        category: "BRASS",
+        description: "50 gms; 3 inches; price not provided",
+        price: 0,
+        moq: 1,
+        image: "assets/products/product-73.jpeg"
+    },
+    {
+        id: 74,
+        name: "Balaji Idol",
+        category: "BRASS",
+        description: "3.5 inches",
+        price: 160,
+        moq: 1,
+        image: "assets/products/product-74.jpeg"
+    },
+    {
+        id: 75,
+        name: "Matki Jar",
+        category: "METAL JARS",
+        description: "6 inches",
+        price: 320,
+        moq: 1,
+        image: "assets/products/product-75.jpeg"
+    },
+    {
+        id: 76,
+        name: "Gangalam",
+        category: "BRASS",
+        description: "120 gms",
+        price: 420,
+        moq: 1,
+        image: "assets/products/product-76.jpeg"
+    },
+    {
+        id: 77,
+        name: "Palm Box",
+        category: "KORAI GIFTS",
+        description: "8 x 8 inches",
+        price: 180,
+        moq: 1,
+        image: "assets/products/product-77.jpeg"
+    },
+    {
+        id: 78,
+        name: "Peacock Diya",
+        category: "BRASS",
+        description: "Size 1: 160 gms",
+        price: 480,
+        moq: 1,
+        image: "assets/products/product-78.jpeg"
+    },
+    {
+        id: 79,
+        name: "Tortoise",
+        category: "BRASS",
+        description: "45 gms; 2.5 inches",
+        price: 160,
+        moq: 1,
+        image: "assets/products/product-79.jpeg"
+    },
+    {
+        id: 80,
+        name: "Korai Bangle Box",
+        category: "KORAI GIFTS",
+        description: "",
+        price: 180,
+        moq: 1,
+        image: "assets/products/product-80.jpeg"
+    },
+    {
+        id: 81,
+        name: "Palm Box",
+        category: "KORAI GIFTS",
+        description: "8 x 8 inches",
+        price: 250,
+        moq: 1,
+        image: "assets/products/product-81.jpeg"
+    },
+    {
+        id: 82,
+        name: "Korai Box",
+        category: "KORAI GIFTS",
+        description: "8 x 8 inches",
+        price: 340,
+        moq: 1,
+        image: "assets/products/product-82.jpeg"
+    },
+    {
+        id: 83,
+        name: "Pichwai Tray",
+        category: "BRASS",
+        description: "275 gms; 7 inches",
+        price: 950,
+        moq: 1,
+        image: "assets/products/product-83.jpeg"
+    },
+    {
+        id: 84,
+        name: "Meenakari Steel Box",
+        category: "MEENAKARI",
+        description: "5 inches",
+        price: 220,
+        moq: 1,
+        image: "assets/products/product-84.jpg"
+    },
+    {
+        id: 85,
+        name: "Meenakari Steel Box",
+        category: "MEENAKARI",
+        description: "5 inches",
+        price: 220,
+        moq: 1,
+        image: "assets/products/product-85.jpg"
+    },
+    {
+        id: 86,
+        name: "Meenakari Steel Box",
+        category: "MEENAKARI",
+        description: "5 inches",
+        price: 220,
+        moq: 1,
+        image: "assets/products/product-86.jpg"
+    },
+    {
+        id: 87,
+        name: "Meenakari Steel Box",
+        category: "MEENAKARI",
+        description: "5 inches",
+        price: 220,
+        moq: 1,
+        image: "assets/products/product-87.jpg"
+    },
+    {
+        id: 88,
+        name: "Meenakari Glass",
+        category: "MEENAKARI",
+        description: "Standard size",
+        price: 120,
+        moq: 1,
+        image: "assets/products/product-88.jpg"
+    },
+    {
+        id: 89,
+        name: "Meenakari Glass",
+        category: "MEENAKARI",
+        description: "Standard size",
+        price: 120,
+        moq: 1,
+        image: "assets/products/product-89.jpg"
+    },
+    {
+        id: 90,
+        name: "Meenakari Glass",
+        category: "MEENAKARI",
+        description: "Standard size",
+        price: 120,
+        moq: 1,
+        image: "assets/products/product-90.jpg"
     }
-
 ];
 
 
@@ -2273,179 +2942,204 @@ function renderCategories() {
 ========================================================= */
 
 function renderProducts() {
+    const container = document.getElementById("products");
+    const search = document.getElementById("searchInput").value
+        .toLowerCase()
+        .trim();
 
-    const container =
-        document.getElementById(
-            "products"
-        );
+    const sortMode = document.getElementById("sortSelect").value;
 
+    const filtered = products.filter(product => {
+        const matchesCategory =
+            selectedCategory === "All" ||
+            product.category === selectedCategory;
 
-    const search =
-        document
-            .getElementById(
-                "searchInput"
-            )
-            .value
-            .toLowerCase()
-            .trim();
+        const searchableText = (
+            product.name + " " +
+            product.category + " " +
+            product.description
+        ).toLowerCase();
 
+        return matchesCategory && searchableText.includes(search);
+    });
 
-    const filtered =
-        products.filter(
-            product => {
+    function sortProducts(items) {
+        const sorted = [...items];
 
-                const matchesCategory =
-                    selectedCategory === "All" ||
-                    product.category ===
-                        selectedCategory;
+        if (sortMode === "low-high") {
+            sorted.sort((a, b) => {
+                if (a.price <= 0 && b.price > 0) return 1;
+                if (b.price <= 0 && a.price > 0) return -1;
+                return a.price - b.price;
+            });
+        } else if (sortMode === "high-low") {
+            sorted.sort((a, b) => {
+                if (a.price <= 0 && b.price > 0) return 1;
+                if (b.price <= 0 && a.price > 0) return -1;
+                return b.price - a.price;
+            });
+        }
 
+        return sorted;
+    }
 
-                const searchableText =
-                    (
-                        product.name +
-                        " " +
-                        product.category +
-                        " " +
-                        product.description
-                    ).toLowerCase();
-
-
-                const matchesSearch =
-                    searchableText.includes(
-                        search
-                    );
-
-
-                return (
-                    matchesCategory &&
-                    matchesSearch
-                );
-
-            }
-        );
-
-
-    document.getElementById(
-        "productCount"
-    ).textContent =
+    document.getElementById("productCount").textContent =
         `${filtered.length} products`;
-
 
     container.innerHTML = "";
 
-
-    if (
-        filtered.length === 0
-    ) {
-
+    if (filtered.length === 0) {
         container.innerHTML = `
-
             <div class="empty">
-
-                <h3>
-                    No products found
-                </h3>
-
-                <p>
-                    Try another search.
-                </p>
-
+                <h3>No products found</h3>
+                <p>Try another search or category.</p>
             </div>
-
         `;
-
         return;
     }
 
+    // Brass is always first. Other categories follow alphabetically.
+    const categoryOrder = [
+        ...new Set(products.map(product => product.category))
+    ].sort((a, b) => {
+        if (a === "BRASS") return -1;
+        if (b === "BRASS") return 1;
+        return a.localeCompare(b);
+    });
 
-    filtered.forEach(
-        product => {
+    const groups = selectedCategory === "All"
+        ? categoryOrder
+            .map(category => ({
+                category,
+                items: sortProducts(
+                    filtered.filter(product => product.category === category)
+                )
+            }))
+            .filter(group => group.items.length > 0)
+        : [{
+            category: selectedCategory,
+            items: sortProducts(filtered)
+        }];
 
-            const quantity =
-                cart[product.id] ||
-                0;
+    groups.forEach(group => {
+        const section = document.createElement("section");
+        section.className = "category-section";
 
+        const heading = document.createElement("div");
+        heading.className = "category-section-header";
 
-            const card =
-                document.createElement(
-                    "div"
-                );
+        const headingCopy = document.createElement("div");
 
+        const title = document.createElement("h3");
+        title.className = "category-heading";
+        title.textContent = group.category;
 
-            card.className =
-                "product-card";
+        const subtitle = document.createElement("p");
+        subtitle.className = "category-subtitle";
+        subtitle.textContent =
+            `${group.items.length} ${group.items.length === 1 ? "product" : "products"}`;
 
+        headingCopy.append(title, subtitle);
+        heading.appendChild(headingCopy);
 
-            card.innerHTML = `
+        const grid = document.createElement("div");
+        grid.className = "products";
 
-                <img
-                    class="product-image"
-                    src="${product.image}"
-                    alt="${product.name}"
-                    onerror="
-                        this.style.background='var(--blush)';
-                    "
-                >
+        group.items.forEach(product => {
+            const quantity = cart[product.id] || 0;
 
+            const card = document.createElement("article");
+            card.className = "product-card";
 
-                <div class="product-info">
+            const image = document.createElement("img");
+            image.className = "product-image";
+            image.src = product.image;
+            image.alt = product.name;
+            image.loading = "lazy";
+            image.onerror = function () {
+                this.style.visibility = "hidden";
+            };
 
+            const info = document.createElement("div");
+            info.className = "product-info";
 
-                    <div class="product-name">
-                        ${product.name}
-                    </div>
+            const name = document.createElement("div");
+            name.className = "product-name";
+            name.textContent = product.name;
 
+            const meta = document.createElement("div");
+            meta.className = "product-meta";
+            meta.textContent = product.category;
 
-                    <div class="product-meta">
-                        ${product.category}
-                    </div>
+            const description = document.createElement("div");
+            description.className = "product-description";
+            description.textContent = product.description || "";
 
+            const price = document.createElement("div");
 
-                    <div class="product-description">
-                        ${product.description}
-                    </div>
+            if (Number(product.price) > 0) {
+                price.className = "product-price";
+                price.textContent =
+                    `₹${Number(product.price).toLocaleString("en-IN")}`;
+            } else {
+                price.className = "price-unavailable";
+                price.textContent = "Price to be confirmed";
+            }
 
+            const moq = document.createElement("div");
+            moq.className = "moq";
+            moq.textContent = `Reference MOQ: ${product.moq} pcs`;
 
-                    <div class="product-price">
-                        ₹${product.price}
-                    </div>
+            const quantityRow = document.createElement("div");
+            quantityRow.className = "quantity-entry";
 
+            const label = document.createElement("label");
+            label.htmlFor = `qty-${product.id}`;
+            label.textContent = "Quantity";
 
-                    <div class="moq">
-                        MOQ: ${product.moq} pcs
-                    </div>
-
-
-                    <button
-                        class="
-                            add-button
-                            ${quantity > 0 ? "added" : ""}
-                        "
-                        onclick="
-                            addToCart(${product.id})
-                        "
-                    >
-
-                        ${
-                            quantity > 0
-                                ? `✓ ${quantity} in cart`
-                                : "+ ADD TO CART"
-                        }
-
-                    </button>
-
-                </div>
-
-            `;
-
-
-            container.appendChild(
-                card
+            const input = document.createElement("input");
+            input.id = `qty-${product.id}`;
+            input.type = "number";
+            input.min = "1";
+            input.step = "1";
+            input.inputMode = "numeric";
+            input.value = quantity || 1;
+            input.setAttribute(
+                "aria-label",
+                `Quantity for ${product.name}`
             );
 
-        }
-    );
+            quantityRow.append(label, input);
 
+            const button = document.createElement("button");
+            button.className =
+                `add-button ${quantity > 0 ? "added" : ""}`;
+
+            button.textContent = quantity > 0
+                ? `✓ ${quantity} IN CART · UPDATE`
+                : "ADD TO ENQUIRY";
+
+            button.addEventListener("click", () => {
+                addToCart(product.id);
+            });
+
+            info.append(
+                name,
+                meta,
+                description,
+                price,
+                moq,
+                quantityRow,
+                button
+            );
+
+            card.append(image, info);
+            grid.appendChild(card);
+        });
+
+        section.append(heading, grid);
+        container.appendChild(section);
+    });
 }
 
 
@@ -2454,37 +3148,27 @@ function renderProducts() {
 ========================================================= */
 
 function addToCart(id) {
+    const product = products.find(p => p.id === Number(id));
+    const input = document.getElementById(`qty-${id}`);
 
-    if (!cart[id]) {
+    if (!product || !input) return;
 
-        const product =
-            products.find(
-                p =>
-                    p.id === id
-            );
+    const quantity = Number(input.value);
 
-
-        cart[id] =
-            product.moq;
-
-    }
-    else {
-
-        cart[id] += 1;
-
+    if (!Number.isInteger(quantity) || quantity < 1) {
+        alert("Please enter a whole-number quantity of at least 1.");
+        input.focus();
+        return;
     }
 
+    // Save exactly the quantity entered by the customer.
+    // MOQ is displayed for guidance but is not enforced.
+    cart[id] = quantity;
 
     saveCart();
-
     renderProducts();
-
     updateCartBar();
-
-    showToast(
-        "Added to cart"
-    );
-
+    showToast("Quantity saved to your enquiry");
 }
 
 
@@ -2492,43 +3176,24 @@ function addToCart(id) {
    CHANGE QUANTITY
 ========================================================= */
 
-function changeQuantity(
-    id,
-    change
-) {
+function changeQuantity(id, change) {
+    id = Number(id);
 
     if (!cart[id]) return;
 
+    const nextQuantity = Number(cart[id]) + Number(change);
 
-    const product =
-        products.find(
-            p =>
-                p.id === Number(id)
-        );
-
-
-    cart[id] += change;
-
-
-    if (
-        cart[id] <
-        product.moq
-    ) {
-
-        cart[id] =
-            product.moq;
-
+    if (nextQuantity < 1) {
+        removeFromCart(id);
+        return;
     }
 
+    cart[id] = nextQuantity;
 
     saveCart();
-
     renderProducts();
-
     renderCart();
-
     updateCartBar();
-
 }
 
 
@@ -2880,106 +3545,74 @@ function renderCart() {
 ========================================================= */
 
 function sendWhatsAppOrder() {
+    const ids = Object.keys(cart);
 
-    const ids =
-        Object.keys(cart);
-
-
-    if (
-        ids.length === 0
-    ) {
-
-        alert(
-            "Please add products to your cart first."
-        );
-
+    if (ids.length === 0) {
+        alert("Please add products to your enquiry first.");
         return;
-
     }
 
-
-    let message =
-        `*KUSHII GIFTS - WHOLESALE ORDER*\n\n`;
-
-
-    message +=
-        `Hello Kushii Gifts,\n\n`;
-
-
-    message +=
-        `I would like to enquire/order the following products:\n\n`;
-
+    let message = "*KUSHII GIFTS - PRODUCT ENQUIRY*\n\n";
+    message += "Hello Kushii Gifts,\n\n";
+    message += "I would like to enquire about these products:\n\n";
 
     let total = 0;
+    let unpricedCount = 0;
 
+    ids.forEach(id => {
+        const product = products.find(
+            p => p.id === Number(id)
+        );
 
-    ids.forEach(
-        id => {
+        if (!product) return;
 
-            const product =
-                products.find(
-                    p =>
-                        p.id ===
-                        Number(id)
-                );
+        const quantity = Number(cart[id]) || 0;
+        if (quantity < 1) return;
 
-
-            if (!product) return;
-
-
-            const quantity =
-                cart[id];
-
-
-            const itemTotal =
-                product.price *
-                quantity;
-
-
-            total +=
-                itemTotal;
-
+        if (Number(product.price) > 0) {
+            const itemTotal = Number(product.price) * quantity;
+            total += itemTotal;
 
             message +=
                 `• ${product.name}\n` +
-                `  Qty: ${quantity}\n` +
-                `  Price: ₹${product.price}\n` +
-                `  Subtotal: ₹${itemTotal}\n\n`;
+                `  Quantity: ${quantity}\n` +
+                `  Listed unit price: ₹${Number(product.price).toLocaleString("en-IN")}\n` +
+                `  Estimated subtotal: ₹${itemTotal.toLocaleString("en-IN")}\n\n`;
+        } else {
+            unpricedCount++;
 
+            message +=
+                `• ${product.name}\n` +
+                `  Quantity: ${quantity}\n` +
+                `  Price: To be confirmed by Kushii Gifts\n\n`;
         }
-    );
-
-
-    message +=
-        `*Estimated Total: ₹${total.toLocaleString("en-IN")}*\n\n`;
-
+    });
 
     message +=
-        `Please confirm availability, final wholesale pricing and delivery details.\n\n`;
+        `*Estimated total for priced items: ₹${total.toLocaleString("en-IN")}*\n`;
 
+    if (unpricedCount > 0) {
+        message +=
+            `Note: ${unpricedCount} product(s) have prices to be confirmed and are excluded from the estimate.\n`;
+    }
 
     message +=
-        `Thank you.`;
+        "\nThis is a product enquiry only, not a confirmed order or payment.\n\n";
 
+    message +=
+        "Please confirm availability, final wholesale pricing and delivery details.\n\n";
 
-    const phone =
-        "918019093131";
+    message += "Thank you.";
 
+    const phone = "918019093131";
 
     const url =
         "https://wa.me/" +
         phone +
         "?text=" +
-        encodeURIComponent(
-            message
-        );
+        encodeURIComponent(message);
 
-
-    window.open(
-        url,
-        "_blank"
-    );
-
+    window.open(url, "_blank");
 }
 
 
@@ -3025,13 +3658,11 @@ function showToast(
 ========================================================= */
 
 document
-    .getElementById(
-        "searchInput"
-    )
-    .addEventListener(
-        "input",
-        renderProducts
-    );
+    .getElementById("searchInput")
+    .addEventListener("input", renderProducts);
+document
+    .getElementById("sortSelect")
+    .addEventListener("change", renderProducts);
 
 
 /* =========================================================
