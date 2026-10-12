@@ -1383,7 +1383,7 @@ body {
     content: "THE ART OF THOUGHTFUL GIVING · CURATED WITH CARE";
     display: block;
     margin-bottom: 22px;
-    color: var(--rose-dark);
+    color: var(--#754b52);
     font-size: 10px;
     letter-spacing: .18em;
     font-weight: 700;
@@ -1815,6 +1815,16 @@ body {
         display: block;
     }
 }
+
+.product-description {
+    min-height: 0 !important;
+    margin-top: 4px !important;
+    line-height: 1.35;
+}
+.product-price{
+    margin-top: 5px !important;
+}
+
 </style>
 
 </head>
@@ -1864,7 +1874,7 @@ body {
 
 <!-- =====================================================
      SEARCH
-===================================================== -->
+=====================================================-->
 
 <div class="search-wrapper">
 
@@ -1897,7 +1907,7 @@ body {
 <div class="catalogue-title">
     <div class="catalogue-heading-copy">
         <p class="eyebrow">THE KUSHII COLLECTION</p>
-        <h2>Thoughtful gifts, beautifully chosen.</h2>
+        <h2>Make every gesture unforgettable.</h2>
         <span id="productCount" class="product-count">Products</span>
     </div>
 
@@ -2082,7 +2092,7 @@ const products = [
         id: 1,
         name: "Copper Glass Set",
         category: "BRASS",
-        description: "Standard glass size",
+        description: "Standard size",
         price: 900,
         moq: 30,
         image: "assets/products/product-01.jpg"
@@ -2091,7 +2101,7 @@ const products = [
         id: 2,
         name: "Spice Box",
         category: "BRASS",
-        description: "Weight 200 gms; 4 inches",
+        description: "200 gms; 4 inches",
         price: 640,
         moq: 30,
         image: "assets/products/product-02.jpg"
@@ -2100,7 +2110,7 @@ const products = [
         id: 3,
         name: "Prasadam Bowl",
         category: "BRASS",
-        description: "Weight 65 gms; width as shown in image",
+        description: "65 gms",
         price: 385,
         moq: 1,
         image: "assets/products/product-03.jpg"
@@ -2118,7 +2128,7 @@ const products = [
         id: 5,
         name: "Gangalam",
         category: "BRASS",
-        description: "50–90 gms; price range ₹250–₹380",
+        description: "50–90 gms; ₹250–₹380",
         price: 250,
         moq: 1,
         image: "assets/products/product-05.jpeg"
@@ -2154,7 +2164,7 @@ const products = [
         id: 9,
         name: "Shanku Chakra Diyas",
         category: "BRASS",
-        description: "Available in 2 sizes; price range ₹425–₹540",
+        description: "2 sizes; ₹425–₹540",
         price: 425,
         moq: 1,
         image: "assets/products/product-09.jpeg"
@@ -2172,7 +2182,7 @@ const products = [
         id: 11,
         name: "Lotus Diyas",
         category: "BRASS",
-        description: "Available in 2 sizes",
+        description: "2 sizes",
         price: 430,
         moq: 1,
         image: "assets/products/product-11.jpeg"
@@ -2208,7 +2218,7 @@ const products = [
         id: 15,
         name: "Parrot Kumkum Holder",
         category: "WOODEN HANDICRAFTS",
-        description: "Size as shown in image",
+        description: "Size in image",
         price: 160,
         moq: 1,
         image: "assets/products/product-15.jpg"
@@ -2217,7 +2227,7 @@ const products = [
         id: 16,
         name: "Balaji Kumkum Holder",
         category: "WOODEN HANDICRAFTS",
-        description: "Size as shown in image",
+        description: "Size in image",
         price: 260,
         moq: 1,
         image: "assets/products/product-16.jpg"
@@ -2226,7 +2236,7 @@ const products = [
         id: 17,
         name: "Thambulam Kumkum Set",
         category: "WOODEN HANDICRAFTS",
-        description: "Size as shown in image",
+        description: "Size in image",
         price: 230,
         moq: 1,
         image: "assets/products/product-17.jpg"
@@ -2235,7 +2245,7 @@ const products = [
         id: 18,
         name: "Raja Rani Kumkum Holder",
         category: "WOODEN HANDICRAFTS",
-        description: "Size as shown in image",
+        description: "Size in image",
         price: 220,
         moq: 1,
         image: "assets/products/product-18.jpg"
@@ -2244,7 +2254,7 @@ const products = [
         id: 19,
         name: "Balaji Idols",
         category: "WOODEN HANDICRAFTS",
-        description: "Size as shown in image",
+        description: "Size in image",
         price: 150,
         moq: 1,
         image: "assets/products/product-19.jpg"
@@ -2253,7 +2263,7 @@ const products = [
         id: 20,
         name: "Balaji Idols",
         category: "WOODEN HANDICRAFTS",
-        description: "Size as shown in image",
+        description: "Size in image",
         price: 460,
         moq: 1,
         image: "assets/products/product-20.jpg"
@@ -2262,7 +2272,7 @@ const products = [
         id: 21,
         name: "Parrot Kumkum Holder",
         category: "WOODEN HANDICRAFTS",
-        description: "Size as shown in image",
+        description: "Size in image",
         price: 230,
         moq: 1,
         image: "assets/products/product-21.jpg"
@@ -2271,7 +2281,7 @@ const products = [
         id: 22,
         name: "Balaji Idols",
         category: "WOODEN HANDICRAFTS",
-        description: "Size as shown in image",
+        description: "Size in image",
         price: 170,
         moq: 1,
         image: "assets/products/product-22.jpg"
@@ -2280,8 +2290,8 @@ const products = [
         id: 23,
         name: "Balaji Idols",
         category: "WOODEN HANDICRAFTS",
-        description: "Size as shown in image; price not provided",
-        price: 0,
+        description: "Size in image",
+        price: 900,
         moq: 1,
         image: "assets/products/product-23.jpg"
     },
@@ -2289,7 +2299,7 @@ const products = [
         id: 24,
         name: "Balaji Idols",
         category: "WOODEN HANDICRAFTS",
-        description: "Size as shown in image",
+        description: "Size in image",
         price: 800,
         moq: 1,
         image: "assets/products/product-24.jpg"
@@ -2298,7 +2308,7 @@ const products = [
         id: 25,
         name: "Balaji Idols",
         category: "WOODEN HANDICRAFTS",
-        description: "Size as shown in image",
+        description: "Size in image",
         price: 400,
         moq: 1,
         image: "assets/products/product-25.jpg"
@@ -2307,7 +2317,7 @@ const products = [
         id: 26,
         name: "Balaji Idols",
         category: "WOODEN HANDICRAFTS",
-        description: "Size as shown in image",
+        description: "Size in image",
         price: 175,
         moq: 1,
         image: "assets/products/product-26.jpg"
@@ -2316,7 +2326,7 @@ const products = [
         id: 27,
         name: "Balaji Idol with Bag",
         category: "WOODEN HANDICRAFTS",
-        description: "Size as shown in image",
+        description: "Size in image",
         price: 250,
         moq: 1,
         image: "assets/products/product-27.jpg"
@@ -2541,7 +2551,7 @@ const products = [
         id: 53,
         name: "Diyas in Potli",
         category: "HAMPER",
-        description: "Diyas in Potli Bag",
+        description: "Diyas in Potli",
         price: 450,
         moq: 1,
         image: "assets/products/product-53.jpeg"
@@ -2613,7 +2623,7 @@ const products = [
         id: 61,
         name: "Annapakshi Diyas",
         category: "BRASS",
-        description: "",
+        description: "10 inches",
         price: 800,
         moq: 1,
         image: "assets/products/product-61.jpeg"
@@ -2640,8 +2650,8 @@ const products = [
         id: 66,
         name: "Gangalam",
         category: "BRASS",
-        description: "140 gms; 3.5 inches; price not provided",
-        price: 0,
+        description: "2 sizes ₹580 - ₹780",
+        price: 580,
         moq: 1,
         image: "assets/products/product-66.jpeg"
     },
@@ -2694,8 +2704,8 @@ const products = [
         id: 73,
         name: "Prasadam Bowl",
         category: "BRASS",
-        description: "50 gms; 3 inches; price not provided",
-        price: 0,
+        description: "50 gms; 3 inches",
+        price: 230,
         moq: 1,
         image: "assets/products/product-73.jpeg"
     },
@@ -2757,7 +2767,7 @@ const products = [
         id: 80,
         name: "Korai Bangle Box",
         category: "KORAI GIFTS",
-        description: "",
+        description: "5 inches",
         price: 180,
         moq: 1,
         image: "assets/products/product-80.jpeg"
